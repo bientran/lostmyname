@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --progress --colors",
+    "start": "npm run webpack",
+    "webpack-dev": "./node_modules/.bin/webpack-dev-server --progress --colors",
     "webpack": "./node_modules/.bin/webpack"
   },
   "author": "",
