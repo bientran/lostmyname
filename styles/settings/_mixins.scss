@@ -1,0 +1,27 @@
+// Set opacity for elements that compatible with some older browsers
+@mixin set-opacity($value) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$value*10+")";
+  -ms-filter: alpha($value*10);
+  filter: alpha(opacity=$value*10);
+  -moz-opacity: $value;
+  -khtml-opacity: $value;
+  opacity: $value;
+}
+
+@mixin block-spacing($desktop, $tablet) {
+  padding: $desktop;
+
+  @include respond-to-max($tabletSize) {
+      padding: $tablet;
+  }
+}
+
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+      @each $prefix in $prefixes {
+          #{'-' + $prefix + '-' + $property}: $value;
+      }
+      // Output standard non-prefixed declaration
+      #{$property}: $value;
+  }
+}

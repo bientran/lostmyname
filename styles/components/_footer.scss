@@ -1,0 +1,102 @@
+$pre: 'lost-my-name__footer';
+
+.#{$pre} {
+    background-color: $color-brown;
+    
+    .#{$pre}__top {
+        @extend %roboto-bold;
+        @extend %shadow-box;
+        padding: 20px 0;
+
+        .#{$pre}__nav {    
+            .#{$pre}__logo {
+                display: inline-block;
+    
+                span {
+                    margin-left: 3px;
+                }
+
+                @include respond-to-max($tabletSize) {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 7px;
+                    border-bottom: 1px dashed $color-dark-brown;
+                    padding-bottom: 15px;
+                    font-size: 30px;
+                }
+            }
+            .#{$pre}__main-nav {
+                display: inline-block;
+                margin-left: 15px;
+
+                @include respond-to-max($tabletSize) {
+                    margin: 0;
+                    display: block;
+                }
+
+                li {
+                    display: inline-block;
+                    border-left: 1px solid $color-dark-brown;
+    
+                    a {
+                        padding: 15px;
+
+                        @include respond-to-max($tabletSize) {
+                            display: block;
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+
+                    @include respond-to-max($tabletSize) {
+                        display: block;
+                        border: none;
+                    }
+                }
+            }
+        }
+    
+        .#{$pre}__socials{
+            .#{$pre}__social-item {
+                
+            }
+        }
+    }
+
+    .#{$pre}__bottom {
+        padding: 20px 0;
+
+        @include respond-to-max($tabletSize) {
+            text-align: center;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .#{$pre}__copyright {
+            font-size: 80%;
+        }
+
+        .#{$pre}__second-nav {
+            @extend %roboto-bold;
+            display: inline-block;
+            li {
+                display: inline-block;
+                border-right: 1px solid $color-dark-brown;
+
+                a {
+                    padding: 15px;
+                }
+
+                @include respond-to-max($tabletSize) {
+                    display: block;
+                    border: none;
+                    a {
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+}

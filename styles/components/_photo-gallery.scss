@@ -1,0 +1,50 @@
+$pre: 'lost-my-name__photo-gallery';
+
+.#{$pre} {
+    @include block-spacing($block-spacing, $block-spacing-tablet);
+    background-color: $color-darker-brown;
+
+    .#{$pre}__item {
+        background-color: $color-white;
+        @extend %extra-shadow-box;
+        padding: 10px;
+        border-radius: 3px;
+        width: 95%;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+        }
+
+        @include respond-to-max($desktopSize) {
+            margin-bottom: 20px;
+        }
+
+        @include respond-to-max($tabletSize) {
+            margin-bottom: 40px;
+            width: 90%;
+        }
+
+        p {
+            @extend %courgette;
+        }
+    }
+
+    .container {
+        .row {
+            > div {
+                &:nth-child(odd) {
+                    .#{$pre}__item {
+                        @include prefix(( transform: rotateZ(-5deg) ), webkit moz ms o);
+                    }
+                }
+        
+                &:nth-child(even) {
+                    .#{$pre}__item {
+                        @include prefix(( transform: rotateZ(5deg) ), webkit moz ms o);
+                    }
+                }
+            }
+        }
+    }
+}

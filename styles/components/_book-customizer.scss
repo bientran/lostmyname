@@ -1,0 +1,118 @@
+$pre: 'lost-my-name__book-customizer';
+
+.#{$pre} {
+    @include block-spacing($block-spacing, $block-spacing-tablet);
+    background-color: $color-light-green;
+
+    .#{$pre}__title {
+        margin-bottom: 30px;
+        h3 {
+            @extend %medium-title;
+            margin-bottom: 15px;
+        }
+    }
+
+    .#{$pre}__search-box {
+        @extend %shadow-box;
+        background-color: $color-brown;
+        padding: 25px;
+        border-radius: 5px;
+        text-align: center;
+
+        .#{$pre}__label {
+            display: block;
+            border-bottom: 1px solid $color-dark-brown;
+            text-transform: uppercase;
+            color: $color-dark-brown;
+            position: relative;
+            padding: 7px 0 7px 40px;
+            @extend %roboto-bold;
+            margin-bottom: 15px;
+            text-align: left;
+
+            span {
+                @extend %vertical-centered;
+                left: 0;
+                width: 35px;
+                height: 35px;
+                background: transparent url(/dist/images/pin.png) no-repeat center center;
+                background-size: contain;
+                color: $color-white;
+                text-align: center;
+                line-height: 1.75;
+
+                @include respond-to-max($tabletSize) {
+                    line-height: 2.3;
+                }
+            }
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            display: block;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid $color-darker-brown;
+            outline: none;
+        }
+
+        .lost-my-name__btn {
+            width: 100%;
+        }
+    }
+
+    .container {
+        .row {
+            > div {
+                @include respond-to-max($tabletSize) {
+                    margin-bottom: 25px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gender-box {
+    width: 95px;
+    max-width: 48%;
+    font-size: 0;
+    display: inline-block;
+    
+    label {
+        width: 100%;
+        height: 40px;
+        background: transparent url(/dist/images/boys.png) no-repeat center right;
+        background-size: cover;
+        display: block;
+        cursor: pointer;
+    }
+
+    input {
+        position: absolute;
+        z-index: 0;
+        @include set-opacity(0);
+
+        &:checked + label {
+            background: transparent url(/dist/images/boys-active.png) no-repeat center right;
+            background-size: cover;
+        }
+    }
+
+    &.female {
+        label {
+            background: transparent url(/dist/images/girls.png) no-repeat center right;
+            background-size: cover;
+        }
+    
+        input {
+            &:checked + label {
+                background: transparent url(/dist/images/girls-active.png) no-repeat center right;
+                background-size: cover;
+            }
+        }
+    }
+}

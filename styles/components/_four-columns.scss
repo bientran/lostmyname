@@ -1,0 +1,96 @@
+$pre: 'lost-my-name__four-columns';
+
+.#{$pre} {
+    @include block-spacing($block-spacing, $block-spacing-tablet);
+    padding-top: 100px;
+    background-color: $color-darker-brown;
+
+    @include respond-to-max($tabletSize) {
+        padding-top: 100px;
+    }
+
+    .#{$pre}__title {
+        margin-bottom: 30px;
+        h3 {
+            @extend %medium-title;
+            margin-bottom: 15px;
+        }
+    }
+    .#{$pre}__item {
+        text-align: center;
+        position: relative;
+
+        @include respond-to-max($tabletSize) {
+            margin-bottom: 25px;
+        }
+
+        img {
+            display: inline-block;
+            height: 128px;
+            margin-bottom: 30px;
+        }
+        p {
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: 0;
+            width: 100px;
+            height: 128px;
+            background: transparent url(/dist/images/dots-2.png) no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+
+            @include respond-to-max($phoneLandscape) {
+                display: none;
+            }
+        }
+    }
+
+    .container {
+        .row {
+            > div {
+                @include respond-to-min($tabletSize) {
+                    &:nth-child(odd) {
+                        .#{$pre}__item {
+                            &:after {
+                                background: transparent url(/dist/images/dots-1.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        .#{$pre}__item {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                @include respond-to-min-max($phoneLandscape, $desktopSize) {
+                    &:nth-child(0n + 1) {
+                        .#{$pre}__item {
+                            &:after {
+                                background: transparent url(/dist/images/dots-1.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2n) {
+                        .#{$pre}__item {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
