@@ -1,0 +1,43 @@
+$pre: 'lost-my-name__reviews';
+
+.#{$pre} {
+    @include block-spacing($block-spacing, $block-spacing-tablet);
+
+    .#{$pre}-title {
+        h1 {
+            @extend %big-title;
+        }
+
+        .rating {
+            text-align: right;
+        }
+    }
+
+    .#{$pre}-details {
+        > .row {
+            margin: 30px 0;
+        }
+        .#{$pre}__user {
+            h4 {
+                @extend %roboto-bold;
+                line-height: 2;
+            }
+        }
+
+        .#{$pre}__comment {
+            h3 {
+                @extend %roboto-bold;
+                font-size: 22px;
+                margin-bottom: 20px;
+
+                @include respond-to-max($tabletSize) {
+                    font-size: 90%;
+                }
+            }
+
+            p {
+
+            }
+        }
+    }
+}

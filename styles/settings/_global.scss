@@ -6,6 +6,10 @@ $price-tag-font-size-tablet: 18px;
 // Block spacing
 $block-spacing: 70px 0;
 $block-spacing-tablet: 35px 0;
+$block-spacing-product: 30px 0;
+$block-spacing-product-tablet: 20px 0;
+$detail-spacing: 30px 0;
+$detail-spacing-tablet: 15px 0;
 
 body {
     @extend %roboto-regular;
@@ -129,4 +133,110 @@ a {
     &:hover {
         @include set-opacity(0.8);
     }
+}
+
+.rating {
+    .star {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f006";
+            font-size: 22px;
+        }
+    }
+
+    .rating-score {
+        margin-left: 10px;
+    }
+
+    &.type-2 {
+        .rating-score {
+            display: block;
+
+            span {
+                font-size: 120%;
+                @extend %roboto-bold;
+            }
+        }
+    }
+
+    &.five {
+        .star {
+            &:before {
+                content: "\f005";
+                color: $color-yellow;
+            }
+        }
+    }
+
+    &.four {
+        .star {
+            &:before {
+                content: "\f005";
+                color: $color-yellow;
+            }
+
+            &:nth-child(5):before {
+                content: "\f006";
+                color: $color-gray;
+            }
+        }
+    }
+
+    &.three {
+        .star {
+            &:before {
+                content: "\f005";
+                color: $color-yellow;
+            }
+
+            &:nth-child(5),
+            &:nth-child(4) {
+                &:before {
+                    content: "\f006";
+                    color: $color-gray;
+                } 
+            }
+        }
+    }
+
+    &.two {
+        .star {
+            &:before {
+                content: "\f006";
+                color: $color-gray;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                &:before {
+                    content: "\f005";
+                    color: $color-yellow;
+                } 
+            }
+        }
+    }
+
+    &.one {
+        .star {
+            &:before {
+                content: "\f006";
+                color: $color-gray;
+            }
+
+            &:first-child {
+                &:before {
+                    content: "\f005";
+                    color: $color-yellow;
+                } 
+            }
+        }
+    }
+}
+
+.separator {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-radius: 100%;
+    background-color: $color-dark-brown;
 }

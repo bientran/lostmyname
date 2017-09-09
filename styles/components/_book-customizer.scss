@@ -12,6 +12,11 @@ $pre: 'lost-my-name__book-customizer';
         }
     }
 
+    &.type-2 {
+        padding: 15px 0 50px;
+        background-color: transparent;
+    }
+
     .#{$pre}__search-box {
         @extend %shadow-box;
         background-color: $color-brown;

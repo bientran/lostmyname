@@ -64,9 +64,61 @@
         return {
             init: init
         }
-    }
+	}
+	
+	var Slider = function(selector, options) {
+		var ele = $(selector);
+		var settings = options || '';
+
+		var init = function() {
+			ele.ubislider(settings); 
+		}
+
+		return {
+			init: init
+		}
+	}
+
+	var BookCutomizer = function() {
+		var ele = $(".lost-my-name__book-editor");
+		var wish = ele.find(".lost-my-name__book-editor__tabbed .wish");
+		var wishOptions = ele.find(".wish-option");
+
+		var init = function() {
+			if (ele.length > 0 && wish.length > 0) {
+				wish.on('click', function() {
+					var $this = $(this);
+					var target = $this.attr('data-target');
+
+					// hide all wish options
+					wishOptions.hide();
+					$("#" + target).show();
+				});
+
+				$(document).on('click', function(event) {
+					if ($(event.target).parents('.lost-my-name__book-editor__options').length == 0) wishOptions.hide();
+				});
+			}
+		}
+
+		return {
+			init: init
+		}
+	}
     
     var menu = new ToggleMenu();
-    menu.init();
+	menu.init();
+	
+	var productImageSlider = new Slider('#product-image-slider', {
+		arrowsToggle: true,
+		type: 'ecommerce',
+		hideArrows: true,
+		autoSlideOnLastClick: true,
+		modalOnClick: true
+	});
+	productImageSlider.init();
+
+	var bookCutomizer = new BookCutomizer();
+	bookCutomizer.init();
 
 })();

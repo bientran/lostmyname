@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lost My Name - Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/ubislider.min.css">
+        <link href="dist/css/styles.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="lost-my-name__header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="lost-my-name__header__navigation">
+                            <a href="#" class="lost-my-name__header__logo">
+                                <img src="dist/images/logo.png" alt="Logo">
+                                <span>lostmy.name</span>
+                            </a>
+                            <div class="lost-my-name__header__right-nav">
+                                <div class="lost-my-name__header__right-nav-wrapper">
+                                    <a class="lost-my-name__header__toggle-button">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                    <div class="nav-mask"></div>
+                                    <div class="mobile-device-mask"></div>
+
+                                    <ul class="lost-my-name__header__nav">
+                                        <li class="active"><a href="#">Create</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lost-my-name__header__socials">
+                            <div class="lost-my-name__header__social-item"></div>
+                            <div class="lost-my-name__header__social-item"></div>
+                            <div class="lost-my-name__header__social-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lost-my-name__book-editor">
+            <di class="lost-my-name__book-editor__book">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <img src="dist/images/book.jpg" alt="Book">
+                        </div>
+                    </div>
+                </div>
+            </di>
+            <div class="lost-my-name__book-editor__options">
+                <div class="lost-my-name__book-editor__tabbed">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-2">
+                                <div class="first-wish wish" data-target="first-wish">
+                                    <span>Become</span>
+                                    <h3>King Jack</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-2">
+                                <div class="second-wish wish" data-target="second-wish">
+                                    <span>Fill the kingdom with</span>
+                                    <h3>Select characters</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-2">
+                                <div class="third-wish wish" data-target="third-wish">
+                                    <span>Get the monster serving of</span>
+                                    <h3>Select food</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-2">
+                                <div class="dedication wish" data-target="dedication">
+                                    <span>Add dedication</span>
+                                    <h3>Write dedication</h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-4">
+                                <a href="#" class="lost-my-name__btn">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lost-my-name__book-editor__suboptions">
+                    <div id="first-wish" class="wish-option">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <h4>First wish</h4>
+                                    <p>For your child's first wish, they become ruler of a kingdom</p>
+                                    <form action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                                <input type="text" name="fullname" placeholder="Enter child's name" />
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                                <div class="gender-box male">
+                                                    <input id="male" type="radio" checked name="gender" value="male" />
+                                                    <label for="male"></label>
+                                                </div>
+                                                <div class="gender-box female">
+                                                    <input id="female" type="radio" name="gender" value="female" />
+                                                    <label for="female"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                                <input type="button" value="Done" name="submit" class="lost-my-name__btn" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="second-wish" class="wish-option">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <h4>Second wish</h4>
+                                    <p>For their next wish, the kingdom gets filled with the things they love</p>
+                                    <div class="wish-items">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                                <div class="wish-item">
+                                                    <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
+                                                    <p>Dinosaurs</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                                <div class="wish-item">
+                                                    <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
+                                                    <p>Superheroes</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                                <div class="wish-item">
+                                                    <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
+                                                    <p>Animals</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                                <div class="wish-item">
+                                                    <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
+                                                    <p>Princesses</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="third-wish" class="wish-option">
+                        <div class="container">
+                            <div class="row div col-xs-12 col-sm-12 col-md-12">
+                                <h4>Third wish</h4>
+                                <p>For their final wish, they get a plate of food that they love</p>
+                                <div class="wish-items">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-1.jpg" alt="Second wish 1">
+                                                <p>Pasta</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-2.jpg" alt="Second wish 2">
+                                                <p>Pizza</p>
+                                            </div>
+                                        </div>
+                                        <div class="wcol-xs-12 col-sm-6 col-md-3">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-3.jpg" alt="Second wish 3">
+                                                <p>Ice Cream</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-4.jpg" alt="Second wish 4">
+                                                <p>Chicken</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dedication" class="wish-option">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <h4>Write a special message</h4>
+                                    <p>We'll include it at the beginning of their book</p>
+                                    <div class="dedication-form">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <img src="dist/images/dedication.jpg" alt="Dedication image">
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <form action="#" method="post">
+                                                    <textarea></textarea>
+                                                    <input type="submit" value="Done" class="lost-my-name__btn" >
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lost-my-name__reviews">
+            <div class="container">
+                <div class="lost-my-name__reviews-title">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <h1>Reviews</h1>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="rating type-2 five">
+                                <span class="rating-score"><span>9.8</span>/10</span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lost-my-name__reviews-details">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="lost-my-name__reviews__user">
+                                <div class="rating three">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <h4>Rebecca Mitcheson</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <div class="lost-my-name__reviews__comment">
+                                <h3>It’s amazing</h3>
+                                <p>My book arrived for my niece today, kingdom of you, it’s amazing and I can’t wait to give it to her. Will be recommending this to everyone that will listen. Thanks so much</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="separator"></span>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="lost-my-name__reviews__user">
+                                <div class="rating four">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <h4>Evelyn Walsh</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <div class="lost-my-name__reviews__comment">
+                                <h3>Wonderful concept</h3>
+                                <p>Her Majesty The Story Queen thoroughly approves this wonderful concept. High five guys!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="separator"></span>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="lost-my-name__reviews__user">
+                                <div class="rating five">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <h4>Cara Waterfall</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <div class="lost-my-name__reviews__comment">
+                                <h3>Center of their own adventures</h3>
+                                <p>My sons love being at the center of their own adventures in all the Wonderbly books! And this time, they were pretty excited that the things they love most (animals and pizza for Isaac, dinosaurs and ice cream for Samuel) were part of their kingdom!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="separator"></span>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="lost-my-name__reviews__user">
+                                <div class="rating five">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <h4>Patricia Dupin</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <div class="lost-my-name__reviews__comment">
+                                <h3>Beautifully illustrated</h3>
+                                <p>Just received "Kingdom of You" for my Grandson which I will be giving him as an Easter present. It is beautifully illustrated and I am sure that he will love it as he did "The Boy Who Lost His Name". My order was processed quickly and arrived soon after, it was all very efficient. Ordered 18th March and with me 22nd March. Lovely product and excellent customer service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="separator"></span>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="lost-my-name__reviews__user">
+                                <div class="rating four">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <h4>Amanda Kingsbury</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <div class="lost-my-name__reviews__comment">
+                                <h3>Truly awesome idea</h3>
+                                <p>My son loves his book!! This is a truly awesome idea</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lost-my-name__contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h3>Keep in youch for news &amp; offers</h3>
+                        <ul>
+                            <li class="pinterest"><a href="#"></a></li>
+                            <li class="facebook"><a href="#"></a></li>
+                            <li class="google-plus"><a href="#"></a></li>
+                            <li class="twiiter"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lost-my-name__footer">
+            <div class="lost-my-name__footer__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="lost-my-name__footer__nav">
+                                <a href="#" class="lost-my-name__footer__logo">
+                                    <span>lostmy.name</span>
+                                </a>
+                                <ul class="lost-my-name__footer__main-nav">
+                                    <li><a href="#">Create</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="lost-my-name__footer__socials">
+                                <div class="lost-my-name__footer__social-item"></div>
+                                <div class="lost-my-name__footer__social-item"></div>
+                                <div class="lost-my-name__footer__social-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lost-my-name__footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <p class="lost-my-name__footer__copyright">&copy;Copyright lostmy.name 2012. All rights reserved</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <ul class="lost-my-name__footer__second-nav">
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">About Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/tether.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="lib/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="lib/ubislider.min.js"></script>
+        <script src="dist/js/scripts.min.js"></script>
+    </body>
+</html>
