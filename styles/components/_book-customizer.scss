@@ -1,8 +1,13 @@
 $pre: 'lost-my-name__book-customizer';
 
 .#{$pre} {
-    @include block-spacing($block-spacing, $block-spacing-tablet);
-    background-color: $color-light-green;
+    @extend %horizontal-centered;
+    bottom: 30px;
+    width: 950px;
+
+    @include respond-to-max($desktopSize) {
+        width: 95%;
+    }
 
     .#{$pre}__title {
         margin-bottom: 30px;
@@ -18,51 +23,37 @@ $pre: 'lost-my-name__book-customizer';
     }
 
     .#{$pre}__search-box {
-        @extend %shadow-box;
+        border-top: 5px solid $color-lighter-red;
         background-color: $color-brown;
         padding: 25px;
         border-radius: 5px;
         text-align: center;
-
-        .#{$pre}__label {
-            display: block;
-            border-bottom: 1px solid $color-dark-brown;
-            text-transform: uppercase;
-            color: $color-dark-brown;
-            position: relative;
-            padding: 7px 0 7px 40px;
-            @extend %roboto-bold;
-            margin-bottom: 15px;
-            text-align: left;
-
-            span {
-                @extend %vertical-centered;
-                left: 0;
-                width: 35px;
-                height: 35px;
-                background: transparent url(/dist/images/pin.png) no-repeat center center;
-                background-size: contain;
-                color: $color-white;
-                text-align: center;
-                line-height: 1.75;
-
-                @include respond-to-max($tabletSize) {
-                    line-height: 2.3;
-                }
-            }
-        }
 
         input[type="text"] {
             padding: 10px;
             display: block;
             width: 100%;
             border-radius: 3px;
-            border: 1px solid $color-darker-brown;
+            border: 2px solid $color-darker-brown;
             outline: none;
         }
 
         .lost-my-name__btn {
             width: 100%;
+        }
+
+        .row > .col-xs-12 {
+            @include respond-to-min($tabletSize) {
+                padding-right: 0;
+
+                &:last-child {
+                    padding-right: 15px;
+                }
+            }
+
+            @include respond-to-max($tabletSize) {
+                margin: 10px 0;
+            }
         }
     }
 
@@ -82,41 +73,66 @@ $pre: 'lost-my-name__book-customizer';
 }
 
 .gender-box {
-    width: 95px;
-    max-width: 48%;
+    width: calc(50% - 10px);
+    float: left;
     font-size: 0;
     display: inline-block;
     
+    @include respond-to-min($phoneLandscape) {
+        position: relative;
+    }
+
+    &.have-margin {
+        margin-right: 20px;
+    }
+    
     label {
         width: 100%;
-        height: 40px;
-        background: transparent url(/dist/images/boys.png) no-repeat center right;
-        background-size: cover;
-        display: block;
-        cursor: pointer;
-    }
+        @extend .lost-my-name__btn;
+        background-color: $color-light-gray;
 
-    input {
-        position: absolute;
-        z-index: 0;
-        @include set-opacity(0);
-
-        &:checked + label {
-            background: transparent url(/dist/images/boys-active.png) no-repeat center right;
-            background-size: cover;
+        &.active {
+            background-color: $color-light-green;
         }
     }
 
-    &.female {
-        label {
-            background: transparent url(/dist/images/girls.png) no-repeat center right;
-            background-size: cover;
-        }
-    
-        input {
-            &:checked + label {
-                background: transparent url(/dist/images/girls-active.png) no-repeat center right;
-                background-size: cover;
+    .dropdown-menu {
+        top: auto;
+        bottom: calc(100% + 10px);
+        padding: 15px;
+        border: none;
+        @extend %shadow-box;
+        border-top: 5px solid $color-light-green;
+        width: 290px;
+        text-align: center;
+        max-width: 100%;
+
+        li {
+            display: inline-block;
+            border: 2px dashed $color-darker-brown;
+            padding: 5px;
+            border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+                @include set-opacity(0.8);
+            }
+
+            &.active {
+                background-color: $color-light-green;
+                border-color: $color-light-green;
+            }
+
+            img {
+                width: 66px;
+            }
+
+            &:first-child {
+                display: block;
+                border: none;
+                padding: 0;
+                text-align: left;
+                margin-bottom: 15px;
             }
         }
     }

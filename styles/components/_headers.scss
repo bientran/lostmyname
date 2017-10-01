@@ -19,19 +19,18 @@ $pre: 'lost-my-name__header';
                 height: 60px;
                 vertical-align: middle;
             }
-
-            span {
-                margin-left: 3px;
-            }
         }
         .#{$pre}__right-nav {
             display: inline-block;
             margin-left: 10px;
+            @extend %vertical-centered;
+            right: 0;
 
             @include respond-to-max($tabletSize) {
                 position: absolute;
                 top: 10px;
                 right: 15px;
+                transform: none;
             }
     
             .#{$pre}__right-nav-wrapper {
@@ -135,11 +134,14 @@ $pre: 'lost-my-name__header';
 
                     li {
                         display: inline-block;
-                        border-left: 1px solid $color-dark-brown;
+
+                        i {
+                            margin-right: 10px;
+                        }
 
                         a {
                             padding: 15px;
-                            @extend %roboto-bold;
+                            @extend %roboto-regular;
                             color: $color-dark-brown;
                         }
 

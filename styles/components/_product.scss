@@ -58,6 +58,24 @@ $pre: 'lost-my-name__product';
         }
     }
 
+    .#{$pre}__details__title {
+        margin-bottom: 40px;
+        position: relative;
+
+        &:after {
+            content: '';
+            @extend %horizontal-centered;
+            bottom: -20px;
+            width: 200px;
+            border-top: 2px dashed $color-darker-brown;
+        }
+
+        h1 {
+            @extend %big-title-roboto;
+            margin-bottom: 15px;
+        }
+    }
+
     .#{$pre}__details-thumbnail {
         text-align: center;
         img {
@@ -71,16 +89,73 @@ $pre: 'lost-my-name__product';
     }
 
     .#{$pre}__details-information {
-        @extend %vertical-centered;
 
         h3 {
             @extend %medium-title;
             text-align: left;
+
+            @include respond-to-max($phoneMedium) {
+                margin-bottom: 15px;
+            }
         }
 
         p {
             margin: 20px 0;
             text-align: left;
+        }
+    }
+
+    &.type-2 {
+        background: $color-white;
+        width: 750px;
+        margin: 0 auto;
+        max-width: 100%;
+
+        .#{$pre}__details__wrapper {
+            margin-bottom: 25px;
+
+            &.reversed {
+                @include respond-to-min($phoneMedium) {
+                    position: relative;
+
+                    .row, .row .col-xs-12 {
+                        position: initial;
+                    }
+
+                    .#{$pre}__details-thumbnail {
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transform: translate(0, -50%);
+                        -moz-transform: translate(0, -50%);
+                        -o-transform: translate(0, -50%);
+                        -ms-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                        width: 50%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .#{$pre}__details-thumbnail {
+            img {
+                height: 200px;
+            }
+        }
+
+        .#{$pre}__details-information {
+
+            h3 {
+                @extend %small-title-roboto;
+
+                @include respond-to-max($phoneMedium) {
+                    margin-bottom: 10px;
+                }
+            }
+    
+            p {
+                margin: 20px 0;
+            }
         }
     }
 }

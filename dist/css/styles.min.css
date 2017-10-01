@@ -227,36 +227,33 @@ table {
   src: local("Courgette Regular"), local("Courgette-Regular"), url(https://fonts.gstatic.com/s/courgette/v4/BHG8ZtTfO0yYnp02--QxqltXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
-body {
+body, .lost-my-name__quote-text, .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li a, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper p {
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-weight: 400; }
 
-.bold-text, .lost-my-name__btn, .lost-my-name__header, .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li a, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__book-customizer__label, .lost-my-name__footer .lost-my-name__footer__top, .lost-my-name__footer .lost-my-name__footer__bottom .lost-my-name__footer__second-nav {
+.lost-my-name__product__details .lost-my-name__product__details__title h1, .lost-my-name__product__details.type-2 .lost-my-name__product__details-information h3, .bold-text, .lost-my-name__btn, .gender-box label, .rating.type-2 .rating-score span, .lost-my-name__header, .lost-my-name__reviews .lost-my-name__reviews-details .lost-my-name__reviews__user h4, .lost-my-name__reviews .lost-my-name__reviews-details .lost-my-name__reviews__comment h3, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish h3, .lost-my-name__footer .lost-my-name__footer__top, .lost-my-name__footer .lost-my-name__footer__bottom .lost-my-name__footer__second-nav {
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-weight: 700; }
 
-.lost-my-name__four-columns .lost-my-name__four-columns__title h3, .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3, .lost-my-name__contacts h3, .price-tag {
+.lost-my-name__reviews .lost-my-name__reviews-title h1, .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3, .lost-my-name__product .lost-my-name__product__information h3, .lost-my-name__product__details .lost-my-name__product__details-information h3, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option h4, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper h3, .price-tag {
   font-family: 'Gloria Hallelujah', Arial, Helvetica, sans-serif; }
-
-.lost-my-name__photo-gallery .lost-my-name__photo-gallery__item p {
-  font-family: 'Courgette', Arial, Helvetica, sans-serif; }
 
 body {
   font-size: 18px;
-  background-color: #f6f5f1;
+  background-color: #fff;
   line-height: 1.3; }
   @media only screen and (max-width: 767px) {
     body {
       font-size: 14px; } }
 
 a {
-  color: #978964;
+  color: #676764;
   text-decoration: none; }
   a:hover, a:visited, a:focus, a:active {
     text-decoration: none;
-    color: #978964; }
+    color: #676764; }
 
-.lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__book-customizer__label span {
+.lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -265,7 +262,7 @@ a {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%); }
 
-.lost-my-name__banner .lost-my-name__banner__action {
+.lost-my-name__book-customizer, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__title:after, .lost-my-name__product__details .lost-my-name__product__details__title:after {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -274,21 +271,64 @@ a {
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0); }
 
+.fillwidth, .fillheight, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
 .lost-my-name__header {
-  box-shadow: 1px 1px 5px #978964; }
+  box-shadow: 1px 1px 5px #676764; }
 
-.lost-my-name__banner .lost-my-name__banner__action, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box, .lost-my-name__footer .lost-my-name__footer__top {
-  box-shadow: 0 0 5px #978964; }
+.gender-box .dropdown-menu {
+  box-shadow: 0 0 5px #676764; }
 
-.lost-my-name__photo-gallery .lost-my-name__photo-gallery__item {
-  box-shadow: 3px 6px 15px #978964; }
+.lost-my-name__reviews .lost-my-name__reviews-title h1 {
+  font-size: 36px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__reviews .lost-my-name__reviews-title h1 {
+      font-size: 30px; } }
 
-.lost-my-name__four-columns .lost-my-name__four-columns__title h3, .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3, .lost-my-name__contacts h3 {
+.lost-my-name__book-customizer .lost-my-name__book-customizer__title h3, .lost-my-name__product .lost-my-name__product__information h3, .lost-my-name__product__details .lost-my-name__product__details-information h3 {
   font-size: 32px;
   margin-bottom: 30px; }
   @media only screen and (max-width: 767px) {
-    .lost-my-name__four-columns .lost-my-name__four-columns__title h3, .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3, .lost-my-name__contacts h3 {
+    .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3, .lost-my-name__product .lost-my-name__product__information h3, .lost-my-name__product__details .lost-my-name__product__details-information h3 {
       font-size: 26px; } }
+
+.lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option h4 {
+  font-size: 28px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option h4 {
+      font-size: 22px; } }
+
+.lost-my-name__product__details .lost-my-name__product__details__title h1 {
+  font-size: 36px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__product__details .lost-my-name__product__details__title h1 {
+      font-size: 30px; } }
+
+.lost-my-name__product__details.type-2 .lost-my-name__product__details-information h3 {
+  font-size: 28px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__product__details.type-2 .lost-my-name__product__details-information h3 {
+      font-size: 22px; } }
+
+.lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper h3 {
+  font-size: 28px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 991px) {
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper h3 {
+      font-size: 18px;
+      margin-bottom: 15px; } }
 
 .price-tag {
   color: #eb6157;
@@ -297,22 +337,114 @@ a {
     .price-tag {
       font-size: 18px; } }
 
-.lost-my-name__btn {
+.lost-my-name__btn, .gender-box label {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 12px 30px;
   color: #fff !important;
+  font-size: 18px;
   background-color: #eb6157;
   text-align: center;
   outline: none;
   border: none;
-  cursor: pointer; }
-  .lost-my-name__btn:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #eeebdc;
+  border-radius: 3px; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__btn, .gender-box label {
+      font-size: 14px; } }
+  .lost-my-name__btn:hover, .gender-box label:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=8)";
     -ms-filter: opacity(8);
     filter: alpha(opacity=8);
     -moz-opacity: 0.8;
     -khtml-opacity: 0.8;
     opacity: 0.8; }
+
+.lost-my-name__quote-text {
+  color: #F16362;
+  font-style: italic; }
+
+.rating .star:before {
+  font-family: FontAwesome;
+  content: "\F006";
+  font-size: 22px; }
+
+.rating .rating-score {
+  margin-left: 10px; }
+
+.rating.type-2 .rating-score {
+  display: block; }
+  .rating.type-2 .rating-score span {
+    font-size: 120%; }
+
+.rating.five .star:before {
+  content: "\F005";
+  color: #ffcc37; }
+
+.rating.four .star:before {
+  content: "\F005";
+  color: #ffcc37; }
+
+.rating.four .star:nth-child(5):before {
+  content: "\F006";
+  color: #292b2c; }
+
+.rating.three .star:before {
+  content: "\F005";
+  color: #ffcc37; }
+
+.rating.three .star:nth-child(5):before, .rating.three .star:nth-child(4):before {
+  content: "\F006";
+  color: #292b2c; }
+
+.rating.two .star:before {
+  content: "\F006";
+  color: #292b2c; }
+
+.rating.two .star:nth-child(1):before, .rating.two .star:nth-child(2):before {
+  content: "\F005";
+  color: #ffcc37; }
+
+.rating.one .star:before {
+  content: "\F006";
+  color: #292b2c; }
+
+.rating.one .star:first-child:before {
+  content: "\F005";
+  color: #ffcc37; }
+
+.separator {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-radius: 100%;
+  background-color: #676764; }
+
+.fillwidth {
+  width: 100%;
+  height: auto; }
+
+.fillheight {
+  height: 100%;
+  width: auto; }
+
+.left-align {
+  text-align: left !important; }
+  .left-align * {
+    text-align: left !important; }
+
+.right-align {
+  text-align: right !important; }
+  .right-align * {
+    text-align: right !important; }
+
+.center-align {
+  text-align: center !important; }
+  .center-align * {
+    text-align: center !important; }
+
+.mfp-wrap .mfp-img {
+  max-width: 1200px !important; }
 
 .lost-my-name__header {
   height: 60px;
@@ -321,22 +453,22 @@ a {
   left: 0;
   width: 100%;
   z-index: 5;
-  background-color: #f6f5f1; }
+  background-color: #fff; }
   .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__logo {
     display: inline-block; }
     .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__logo img {
       height: 60px;
       vertical-align: middle; }
-    .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__logo span {
-      margin-left: 3px; }
   .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 10px;
+    right: 0; }
     @media only screen and (max-width: 767px) {
       .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav {
         position: absolute;
         top: 10px;
-        right: 15px; } }
+        right: 15px;
+        transform: none; } }
     .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper {
       position: relative; }
       @media only screen and (max-width: 767px) {
@@ -354,8 +486,8 @@ a {
             position: relative;
             z-index: 15; } }
         .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__toggle-button span {
-          border: 2px solid #978964;
-          background-color: #978964;
+          border: 2px solid #676764;
+          background-color: #676764;
           display: block;
           margin-top: 5px;
           -webkit-transition: all 0.35s ease-in-out;
@@ -405,7 +537,7 @@ a {
         top: 0;
         right: -320px;
         width: 290px;
-        background: #978964;
+        background: #676764;
         height: 60px;
         z-index: 13;
         -webkit-transition: all 0.5s ease-in-out;
@@ -428,7 +560,7 @@ a {
             position: fixed;
             right: -320px;
             top: 0;
-            background: #978964;
+            background: #676764;
             height: 100vh;
             z-index: 10;
             width: 290px;
@@ -436,11 +568,12 @@ a {
             overflow: hidden;
             overflow-y: visible; } }
         .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li {
-          display: inline-block;
-          border-left: 1px solid #978964; }
+          display: inline-block; }
+          .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li i {
+            margin-right: 10px; }
           .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li a {
             padding: 15px;
-            color: #978964; }
+            color: #676764; }
           @media only screen and (max-width: 767px) {
             .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li {
               display: block;
@@ -451,135 +584,48 @@ a {
                 color: #fff; } }
 
 .lost-my-name__banner {
-  min-height: 550px;
-  background: transparent url(/dist/images/banner.jpg) no-repeat center center;
-  background-size: cover;
-  position: relative;
-  margin-top: 60px; }
-  @media only screen and (max-width: 479px) {
-    .lost-my-name__banner {
-      min-height: 350px; } }
-  .lost-my-name__banner .lost-my-name__banner__action {
-    background-color: #fff;
-    bottom: -50px;
-    padding: 10px;
-    text-align: center; }
-    @media only screen and (max-width: 767px) {
-      .lost-my-name__banner .lost-my-name__banner__action {
-        width: 70%; } }
+  margin-top: 60px;
+  position: relative; }
+  .lost-my-name__banner .lost-my-name__banner__slider .lost-my-name__banner__slider-item {
+    height: 550px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    outline: none; }
     @media only screen and (max-width: 479px) {
-      .lost-my-name__banner .lost-my-name__banner__action {
-        width: 90%; } }
-    .lost-my-name__banner .lost-my-name__banner__action > a {
-      display: block; }
-    .lost-my-name__banner .lost-my-name__banner__action > span {
-      margin: 10px 15px 0 15px;
-      display: block; }
-      @media only screen and (max-width: 479px) {
-        .lost-my-name__banner .lost-my-name__banner__action > span {
-          margin: 10px 10px 0 10px; } }
-      .lost-my-name__banner .lost-my-name__banner__action > span .price-tag {
-        font-size: 22px;
-        margin-right: 5px; }
-        @media only screen and (max-width: 767px) {
-          .lost-my-name__banner .lost-my-name__banner__action > span .price-tag {
-            font-size: 18px; } }
-
-.lost-my-name__four-columns {
-  padding: 70px 0;
-  padding-top: 100px;
-  background-color: #eeebdc; }
-  @media only screen and (max-width: 767px) {
-    .lost-my-name__four-columns {
-      padding: 35px 0; } }
-  @media only screen and (max-width: 767px) {
-    .lost-my-name__four-columns {
-      padding-top: 100px; } }
-  .lost-my-name__four-columns .lost-my-name__four-columns__title {
-    margin-bottom: 30px; }
-    .lost-my-name__four-columns .lost-my-name__four-columns__title h3 {
-      margin-bottom: 15px; }
-  .lost-my-name__four-columns .lost-my-name__four-columns__item {
-    text-align: center;
-    position: relative; }
-    @media only screen and (max-width: 767px) {
-      .lost-my-name__four-columns .lost-my-name__four-columns__item {
-        margin-bottom: 25px; } }
-    .lost-my-name__four-columns .lost-my-name__four-columns__item img {
-      display: inline-block;
-      height: 128px;
-      margin-bottom: 30px; }
-    .lost-my-name__four-columns .lost-my-name__four-columns__item:after {
-      content: '';
-      position: absolute;
-      right: -60px;
-      top: 0;
-      width: 100px;
-      height: 128px;
-      background: transparent url(/dist/images/dots-2.png) no-repeat center center;
-      background-size: contain;
-      z-index: 0; }
-      @media only screen and (max-width: 639px) {
-        .lost-my-name__four-columns .lost-my-name__four-columns__item:after {
-          display: none; } }
-  @media only screen and (min-width: 768px) {
-    .lost-my-name__four-columns .container .row > div:nth-child(odd) .lost-my-name__four-columns__item:after {
-      background: transparent url(/dist/images/dots-1.png) no-repeat center center;
-      background-size: contain; }
-    .lost-my-name__four-columns .container .row > div:last-child .lost-my-name__four-columns__item:after {
-      display: none; } }
-  @media only screen and (min-width: 640px) and (max-width: 992px) {
-    .lost-my-name__four-columns .container .row > div:nth-child(0n + 1) .lost-my-name__four-columns__item:after {
-      background: transparent url(/dist/images/dots-1.png) no-repeat center center;
-      background-size: contain; }
-    .lost-my-name__four-columns .container .row > div:nth-child(2n) .lost-my-name__four-columns__item:after {
-      display: none; } }
+      .lost-my-name__banner .lost-my-name__banner__slider .lost-my-name__banner__slider-item {
+        height: 350px; } }
+    .lost-my-name__banner .lost-my-name__banner__slider .lost-my-name__banner__slider-item .lost-my-name__banner__slider-item__thumbnail {
+      height: 100%; }
 
 .lost-my-name__book-customizer {
-  padding: 70px 0;
-  background-color: #c0d9c6; }
-  @media only screen and (max-width: 767px) {
-    .lost-my-name__book-customizer {
-      padding: 35px 0; } }
+  bottom: 30px; }
   .lost-my-name__book-customizer .lost-my-name__book-customizer__title {
     margin-bottom: 30px; }
     .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3 {
       margin-bottom: 15px; }
+  .lost-my-name__book-customizer.type-2 {
+    padding: 15px 0 50px;
+    background-color: transparent; }
   .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box {
-    background-color: #f6f5f1;
+    border-top: 5px solid #F16362;
+    background-color: #fff;
     padding: 25px;
     border-radius: 5px;
     text-align: center; }
-    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__book-customizer__label {
-      display: block;
-      border-bottom: 1px solid #978964;
-      text-transform: uppercase;
-      color: #978964;
-      position: relative;
-      padding: 7px 0 7px 40px;
-      margin-bottom: 15px;
-      text-align: left; }
-      .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__book-customizer__label span {
-        left: 0;
-        width: 35px;
-        height: 35px;
-        background: transparent url(/dist/images/pin.png) no-repeat center center;
-        background-size: contain;
-        color: #fff;
-        text-align: center;
-        line-height: 1.75; }
-        @media only screen and (max-width: 767px) {
-          .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__book-customizer__label span {
-            line-height: 2.3; } }
     .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box input[type="text"] {
       padding: 10px;
       display: block;
       width: 100%;
       border-radius: 3px;
-      border: 1px solid #eeebdc;
+      border: 2px solid #eeebdc;
       outline: none; }
-    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__btn {
+    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__btn, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .gender-box label, .gender-box .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box label {
       width: 100%; }
+    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12 {
+      padding-right: 0; }
+      .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12:last-child {
+        padding-right: 15px; }
   @media only screen and (max-width: 767px) {
     .lost-my-name__book-customizer .container .row > div {
       margin-bottom: 25px; }
@@ -587,106 +633,290 @@ a {
         margin: 0; } }
 
 .gender-box {
-  width: 95px;
+  width: 120px;
   max-width: 48%;
   font-size: 0;
   display: inline-block; }
   .gender-box label {
     width: 100%;
-    height: 40px;
-    background: transparent url(/dist/images/boys.png) no-repeat center right;
-    background-size: cover;
-    display: block;
-    cursor: pointer; }
-  .gender-box input {
-    position: absolute;
-    z-index: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    -ms-filter: opacity(0);
-    filter: alpha(opacity=0);
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    opacity: 0; }
-    .gender-box input:checked + label {
-      background: transparent url(/dist/images/boys-active.png) no-repeat center right;
-      background-size: cover; }
-  .gender-box.female label {
-    background: transparent url(/dist/images/girls.png) no-repeat center right;
-    background-size: cover; }
-  .gender-box.female input:checked + label {
-    background: transparent url(/dist/images/girls-active.png) no-repeat center right;
-    background-size: cover; }
+    background-color: #767571; }
+    .gender-box label.active {
+      background-color: #c0d9c6; }
+  .gender-box .dropdown-menu {
+    top: auto;
+    bottom: calc(100% + 10px);
+    padding: 15px;
+    border: none;
+    border-top: 5px solid #c0d9c6;
+    width: 300px;
+    text-align: center; }
+    .gender-box .dropdown-menu li {
+      display: inline-block;
+      border: 2px dashed #eeebdc;
+      padding: 5px;
+      border-radius: 5px; }
+      .gender-box .dropdown-menu li:hover {
+        cursor: pointer;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=8)";
+        -ms-filter: opacity(8);
+        filter: alpha(opacity=8);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8; }
+      .gender-box .dropdown-menu li.active {
+        background-color: #c0d9c6;
+        border-color: #c0d9c6; }
+      .gender-box .dropdown-menu li img {
+        width: 70px; }
+      .gender-box .dropdown-menu li:first-child {
+        display: block;
+        border: none;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 15px; }
 
 .lost-my-name__photo-gallery {
   padding: 70px 0;
-  background-color: #eeebdc; }
+  background-color: #fff; }
   @media only screen and (max-width: 767px) {
     .lost-my-name__photo-gallery {
       padding: 35px 0; } }
-  .lost-my-name__photo-gallery .lost-my-name__photo-gallery__item {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 3px;
-    width: 95%;
-    margin: 0 auto; }
-    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__item img {
-      max-width: 100%; }
-    @media only screen and (max-width: 991px) {
-      .lost-my-name__photo-gallery .lost-my-name__photo-gallery__item {
-        margin-bottom: 20px; } }
+  .lost-my-name__photo-gallery .lost-my-name__photo-gallery__title {
+    position: relative;
+    margin-bottom: 40px; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__title:after {
+      content: '';
+      bottom: -20px;
+      width: 200px;
+      border-top: 2px dashed #c0d9c6; }
+  .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item {
+    width: 20%;
+    height: 150px;
+    padding: 5px; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.double {
+      width: 40%; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.triple {
+      width: 60%; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full {
+      width: 100%; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.one-two-height {
+      height: 75px; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.double-height {
+      height: 300px; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full-height {
+      height: 450px; }
     @media only screen and (max-width: 767px) {
-      .lost-my-name__photo-gallery .lost-my-name__photo-gallery__item {
-        margin-bottom: 40px;
-        width: 90%; } }
-  .lost-my-name__photo-gallery .container .row > div:nth-child(odd) .lost-my-name__photo-gallery__item {
-    -webkit-transform: rotateZ(-5deg);
-    -moz-transform: rotateZ(-5deg);
-    -ms-transform: rotateZ(-5deg);
-    -o-transform: rotateZ(-5deg);
-    transform: rotateZ(-5deg); }
-  .lost-my-name__photo-gallery .container .row > div:nth-child(even) .lost-my-name__photo-gallery__item {
-    -webkit-transform: rotateZ(5deg);
-    -moz-transform: rotateZ(5deg);
-    -ms-transform: rotateZ(5deg);
-    -o-transform: rotateZ(5deg);
-    transform: rotateZ(5deg); }
+      .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item {
+        height: 90px;
+        width: 50%; }
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.double, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.triple, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full {
+          width: 100%; }
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.one-two-height {
+          height: 45px; }
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.double-height {
+          height: 180px; }
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full-height {
+          height: 270px; } }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .lost-my-name__photo-gallery-photos__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 5px; }
+      .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .lost-my-name__photo-gallery-photos__content .image-box, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .lost-my-name__photo-gallery-photos__content .video-box {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+    .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote {
+      background-color: #c0d9c6;
+      padding: 15px;
+      height: 100%;
+      position: relative; }
+      .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper {
+        width: 100%; }
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper h3 {
+          padding: 0 15px; }
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper p {
+          font-size: 16px; }
+          @media only screen and (max-width: 991px) {
+            .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper p {
+              font-size: 13px; } }
 
-.lost-my-name__contacts {
-  text-align: center;
-  padding: 70px 0;
-  background-color: #eeebdc; }
+.grid-sizer {
+  width: 20%; }
   @media only screen and (max-width: 767px) {
-    .lost-my-name__contacts {
-      padding: 35px 0; } }
-  .lost-my-name__contacts ul li {
-    display: inline-block;
-    margin: 0 15px; }
-    @media only screen and (max-width: 767px) {
-      .lost-my-name__contacts ul li {
-        margin: 0 5px; } }
-    .lost-my-name__contacts ul li a {
-      display: block;
-      width: 64px;
-      height: 64px;
-      background: transparent url(/dist/images/pinterest.png) no-repeat center center;
-      background-size: contain; }
+    .grid-sizer {
+      width: 50%; } }
+
+.lost-my-name__product .lost-my-name__product__photo-gallery .ubislider.ecommerce ul li, .ubiModal .ubi-thumbs li {
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out; }
+  .lost-my-name__product .lost-my-name__product__photo-gallery .ubislider.ecommerce ul li:hover, .ubiModal .ubi-thumbs li:hover {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px); }
+
+.lost-my-name__product {
+  padding: 30px 0;
+  margin-top: 60px; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__product {
+      padding: 20px 0; } }
+  .lost-my-name__product .lost-my-name__product__photo-gallery .ubislider-image-container {
+    width: 100%; }
+  .lost-my-name__product .lost-my-name__product__photo-gallery .ubislider.ecommerce {
+    width: 100%; }
+    .lost-my-name__product .lost-my-name__product__photo-gallery .ubislider.ecommerce ul {
+      margin: 0 auto; }
+  .lost-my-name__product .lost-my-name__product__information p {
+    margin: 20px 0; }
+
+.lost-my-name__product__details {
+  background: #fff url(/dist/images/pattern.png) repeat top left;
+  background-size: 200px;
+  padding: 30px 0; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__product__details {
+      padding: 15px 0; } }
+  .lost-my-name__product__details .lost-my-name__product__details__title {
+    margin-bottom: 40px;
+    position: relative; }
+    .lost-my-name__product__details .lost-my-name__product__details__title:after {
+      content: '';
+      bottom: -20px;
+      width: 200px;
+      border-top: 2px dashed #eeebdc; }
+    .lost-my-name__product__details .lost-my-name__product__details__title h1 {
+      margin-bottom: 15px; }
+  .lost-my-name__product__details .lost-my-name__product__details-thumbnail {
+    text-align: center; }
+    .lost-my-name__product__details .lost-my-name__product__details-thumbnail img {
+      max-width: 100%;
+      height: 400px; }
       @media only screen and (max-width: 767px) {
-        .lost-my-name__contacts ul li a {
-          width: 45px;
-          height: 45px; } }
-    .lost-my-name__contacts ul li.facebook a {
-      background: transparent url(/dist/images/facebook.png) no-repeat center center;
-      background-size: contain; }
-    .lost-my-name__contacts ul li.google-plus a {
-      background: transparent url(/dist/images/google-plus.png) no-repeat center center;
-      background-size: contain; }
-    .lost-my-name__contacts ul li.twitter a {
-      background: transparent url(/dist/images/twitter.png) no-repeat center center;
-      background-size: contain; }
+        .lost-my-name__product__details .lost-my-name__product__details-thumbnail img {
+          height: 250px; } }
+  .lost-my-name__product__details .lost-my-name__product__details-information h3 {
+    text-align: left; }
+  .lost-my-name__product__details .lost-my-name__product__details-information p {
+    margin: 20px 0;
+    text-align: left; }
+  .lost-my-name__product__details.type-2 {
+    background: #fff;
+    width: 750px;
+    margin: 0 auto;
+    max-width: 100%; }
+    .lost-my-name__product__details.type-2 .lost-my-name__product__details__wrapper {
+      margin-bottom: 25px; }
+    .lost-my-name__product__details.type-2 .lost-my-name__product__details-thumbnail img {
+      height: 200px; }
+    .lost-my-name__product__details.type-2 .lost-my-name__product__details-information p {
+      margin: 20px 0; }
+
+.lost-my-name__reviews {
+  padding: 70px 0; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__reviews {
+      padding: 35px 0; } }
+  .lost-my-name__reviews .lost-my-name__reviews-title .rating {
+    text-align: right; }
+  .lost-my-name__reviews .lost-my-name__reviews-details > .row {
+    margin: 30px 0; }
+  .lost-my-name__reviews .lost-my-name__reviews-details .lost-my-name__reviews__user h4 {
+    line-height: 2; }
+  .lost-my-name__reviews .lost-my-name__reviews-details .lost-my-name__reviews__comment h3 {
+    font-size: 22px;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 767px) {
+      .lost-my-name__reviews .lost-my-name__reviews-details .lost-my-name__reviews__comment h3 {
+        font-size: 90%; } }
+
+.lost-my-name__book-editor {
+  margin-top: 60px;
+  padding: 70px 0;
+  padding-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .lost-my-name__book-editor {
+      padding: 35px 0; } }
+  .lost-my-name__book-editor .lost-my-name__book-editor__book img {
+    width: 100%; }
+  .lost-my-name__book-editor .lost-my-name__book-editor__options {
+    position: relative; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed {
+      background-color: #fff;
+      border-top: 1px solid #676764;
+      border-bottom: 1px solid #676764;
+      margin-top: 30px; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish {
+        cursor: pointer;
+        border-left: 1px solid #676764;
+        padding: 15px; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish span {
+          font-size: 12px; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish.active {
+          background-color: #fff; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .container .row > div {
+        padding: 0; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .container .row > div:last-child {
+          text-align: right;
+          padding: 10px; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .container .row > div:nth-last-child(2) .wish {
+          border-right: 1px solid #676764; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      padding: 20px 0;
+      background-color: #fff;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+      display: none; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option h4 {
+        margin-bottom: 10px; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option p {
+        margin-bottom: 35px; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option form {
+        margin: 30px 0; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option form input, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option form textarea {
+          padding: 10px;
+          display: block;
+          width: 100%;
+          border-radius: 3px;
+          border: 1px solid #eeebdc;
+          outline: none; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .dedication-form img {
+        width: 100%; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .dedication-form form {
+        text-align: right;
+        margin: 0; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .dedication-form form textarea {
+          height: 300px;
+          resize: none; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .dedication-form form .lost-my-name__btn, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .dedication-form form .gender-box label, .gender-box .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .dedication-form form label {
+          width: auto;
+          margin: 20px 0 0 auto; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item {
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item img {
+          width: 100%; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item p {
+          padding: 5px 10px 10px 10px; }
 
 .lost-my-name__footer {
-  background-color: #f6f5f1; }
+  background-color: #fff; }
   .lost-my-name__footer .lost-my-name__footer__top {
+    border-top: 2px dashed #eeebdc;
+    border-bottom: 2px dashed #eeebdc;
     padding: 20px 0; }
     .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__logo {
       display: inline-block; }
@@ -697,7 +927,7 @@ a {
           display: block;
           text-align: center;
           margin-bottom: 7px;
-          border-bottom: 1px dashed #978964;
+          border-bottom: 1px dashed #676764;
           padding-bottom: 15px;
           font-size: 30px; } }
     .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__main-nav {
@@ -709,7 +939,7 @@ a {
           display: block; } }
       .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__main-nav li {
         display: inline-block;
-        border-left: 1px solid #978964; }
+        border-left: 1px solid #676764; }
         .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__main-nav li a {
           padding: 15px; }
           @media only screen and (max-width: 767px) {
@@ -734,7 +964,7 @@ a {
       display: inline-block; }
       .lost-my-name__footer .lost-my-name__footer__bottom .lost-my-name__footer__second-nav li {
         display: inline-block;
-        border-right: 1px solid #978964; }
+        border-right: 1px solid #676764; }
         .lost-my-name__footer .lost-my-name__footer__bottom .lost-my-name__footer__second-nav li a {
           padding: 15px; }
         @media only screen and (max-width: 767px) {

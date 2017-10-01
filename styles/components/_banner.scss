@@ -1,55 +1,25 @@
 $pre: 'lost-my-name__banner';
 
 .#{$pre} {
-    min-height: 550px;
-    background: transparent url(/dist/images/banner.jpg) no-repeat center center;
-    background-size: cover;
-    position: relative;
     margin-top: 60px;
-
-    @include respond-to-max($phonePortrait) {
-        min-height: 350px;
-    }
+    position: relative;
     
-    .#{$pre}__action {
-        @extend %shadow-box;
-        background-color: $color-white;
-        @extend %horizontal-centered;
-        bottom: -50px;
-        padding: 10px;
-        text-align: center;
-
-        @include respond-to-max($tabletSize) {
-            width: 70%;
-        }
-
-        @include respond-to-max($phonePortrait) {
-            width: 90%;
-        }
-
-        > a {
-            display: block;
-        }
-
-        > span {
-            margin: 10px 15px 0 15px;
-            display: block;
-
+    .#{$pre}__slider {
+        .#{$pre}__slider-item {
+            height: 550px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        
             @include respond-to-max($phonePortrait) {
-                margin: 10px 10px 0 10px;
+                height: 350px;
             }
-            
-            .price-tag {
-                font-size: $price-tag-font-size;
-                margin-right: 5px;
 
-                @include respond-to-max($tabletSize) {
-                    font-size: $price-tag-font-size-tablet;
+            .#{$pre}__slider-item__thumbnail {
+                height: 100%;
+                img {
                 }
-            }
-
-            .bold-text {
-                
             }
         }
     }

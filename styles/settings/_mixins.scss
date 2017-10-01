@@ -16,6 +16,22 @@
   }
 }
 
+@mixin align-text($direction) {
+  text-align: $direction !important;
+
+  * {
+    text-align: $direction !important;
+  }
+
+  @include respond-to-max($phoneMedium) {
+    text-align: center !important;
+    
+    * {
+      text-align: center !important;
+    }
+  }
+}
+
 @mixin prefix($declarations, $prefixes: ()) {
   @each $property, $value in $declarations {
       @each $prefix in $prefixes {

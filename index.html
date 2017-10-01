@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="lib/bootstrap.min.css">
         <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/slick.css"/>
+        <link rel="stylesheet" href="lib/magnific-popup.css" />
         <link href="dist/css/styles.min.css" rel="stylesheet">
     </head>
     <body>
@@ -16,7 +18,6 @@
                         <div class="lost-my-name__header__navigation">
                             <a href="#" class="lost-my-name__header__logo">
                                 <img src="dist/images/logo.png" alt="Logo">
-                                <span>lostmy.name</span>
                             </a>
                             <div class="lost-my-name__header__right-nav">
                                 <div class="lost-my-name__header__right-nav-wrapper">
@@ -29,9 +30,9 @@
                                     <div class="mobile-device-mask"></div>
 
                                     <ul class="lost-my-name__header__nav">
-                                        <li class="active"><a href="#">Create</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li class="active"><a href="#"><i class="fa fa-gift"></i>Create</a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i>Contact us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -48,135 +49,208 @@
         </div>
 
         <div class="lost-my-name__banner">
-            <div class="lost-my-name__banner__action">
-                <a href="#" class="lost-my-name__btn">Create your book</a>
-                <span>
-                    <span class="price-tag">&euro;15.99</span>
-                    <span class="bold-text">+Free UK postage</span>
-                    We deliver worldwide!
-                </span>
-            </div>
-        </div>
-
-        <div class="lost-my-name__four-columns">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="lost-my-name__four-columns__title">
-                            <h3>A magicial book with a personal touch</h3>
-                            <p>Every book is as special (and almost as wonderful) as your child, based on the letters of their name. Here are some examples of how it might look.</p>
-                        </div>
+            <div class="lost-my-name__banner__slider">
+                <div class="lost-my-name__banner__slider-item">
+                    <div class="lost-my-name__banner__slider-item__thumbnail">
+                        <img src="https://lostmyname-prismic.imgix.net/cefcdb0f001eb52629d7f4d37f065c4f2ff38c2d_homepageherodesktop.jpg?auto=compress%2Cformat&w=1780" />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="lost-my-name__four-columns__item">
-                            <img src="images/story-icon-1.png" alt="Story icon">
-                            <p>Creating your book is as easy as entering your childs name.</p>
-                        </div>
+                <div class="lost-my-name__banner__slider-item">
+                    <div class="lost-my-name__banner__slider-item__thumbnail">
+                        <img src="https://lostmyname-prismic.imgix.net/cefcdb0f001eb52629d7f4d37f065c4f2ff38c2d_homepageherodesktop.jpg?auto=compress%2Cformat&w=1780" />
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="lost-my-name__four-columns__item">
-                            <img src="images/story-icon-2.png" alt="Story icon">
-                            <p>Each letter has it's own story which together create a unique table</p>
-                        </div>
+                </div>
+                <div class="lost-my-name__banner__slider-item">
+                    <div class="lost-my-name__banner__slider-item__thumbnail">
+                        <img src="https://lostmyname-prismic.imgix.net/cefcdb0f001eb52629d7f4d37f065c4f2ff38c2d_homepageherodesktop.jpg?auto=compress%2Cformat&w=1780" />
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="lost-my-name__four-columns__item">
-                            <img src="images/story-icon-3.png" alt="Story icon">
-                            <p>Your unique book is printed on demand.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="lost-my-name__four-columns__item">
-                            <img src="images/story-icon-4.png" alt="Story icon">
-                            <p>Your children discovers they are the star of the story.</p>
-                        </div>
+                </div>
+                <div class="lost-my-name__banner__slider-item">
+                    <div class="lost-my-name__banner__slider-item__thumbnail">
+                        <img src="dist/images/banner.jpg" />
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="lost-my-name__book-customizer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="lost-my-name__book-customizer__title">
-                            <h3>A magicial book with a personal touch</h3>
-                        </div>
-
-                        <div class="lost-my-name__book-customizer__search-box">
-                            <form action="#" method="post">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-4 col-md-4">
-                                        <h4 class="lost-my-name__book-customizer__label"><span>1</span>Choose name</h4>
-                                        <input type="text" name="fullname" placeholder="Enter child's name" />
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-4">
-                                        <h4 class="lost-my-name__book-customizer__label"><span>2</span>Select gender</h4>
-                                        <div class="gender-box male">
-                                            <input id="male" type="radio" checked name="gender" value="male" />
-                                            <label for="male"></label>
-                                        </div>
-                                        <div class="gender-box female">
-                                            <input id="female" type="radio" name="gender" value="female" />
-                                            <label for="female"></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-4">
-                                        <h4 class="lost-my-name__book-customizer__label"><span>3</span>Here's your book!</h4>
-                                        <input type="submit" value="Preview" name="submit" class="lost-my-name__btn" />
-                                    </div>
+            <div class="lost-my-name__book-customizer">
+                <div class="lost-my-name__book-customizer__search-box">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <input type="text" name="fullname" placeholder="Enter child's name" />
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <input type="hidden" id="gender" name="gender" value="genderAfterSelected" />
+                                <div class="gender-box have-margin" class="dropup">
+                                    <label for="male" data-toggle="dropdown">Boy</label>
+                                    <ul class="dropdown-menu">
+                                        <li>Please choose your character</li>
+                                        <li data-value="boy1">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-ii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="boy2">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-iii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="boy3">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-vi.png?auto=format,compress&q=70" />
+                                        </li>
+                                    </ul>
                                 </div>
-                            </form>
+                                <div class="gender-box" class="dropup">
+                                    <label for="female" data-toggle="dropdown">Girl</label>
+                                    <ul class="dropdown-menu">
+                                        <li>Please choose your character</li>
+                                        <li data-value="girl1">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-ii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="girl2">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-iii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="girl3">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-vi.png?auto=format,compress&q=70" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <input type="submit" value="Create Book" name="submit" class="lost-my-name__btn" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="lost-my-name__product__details type-2">
+            <div class="container">
+                <div class="lost-my-name__product__details__title center-align">
+                    <h1>An amazing, magicial,<br />persionalised book</h1>
+                    <p class="lost-my-name__quote-text">Printed specifically for every child</p>
+                </div>
+                <div class="lost-my-name__product__details__wrapper">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="lost-my-name__product__details-information right-align">
+                                <h3>Choose your cast of characters</h3>
+                                <p>Pick characters your little one will love. Like superheroes, princesses or dinosaurs. Kazam! The whole story changes, like magic.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="lost-my-name__product__details-thumbnail">
+                                <img src="dist/images/wish-2.png" alt="Wish 2" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lost-my-name__product__details__wrapper reversed">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 offset-sm-6 offset-md-6">
+                                <div class="lost-my-name__product__details-information left-align">
+                                    <h3>Name the kingdom after them</h3>
+                                    <p>Your child will be flabbergasted when they open the book and see their name...well, everywhere. Magic!</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="lost-my-name__product__details-thumbnail">
+                                    <img src="dist/images/wish-1.png" alt="Wish 1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="lost-my-name__product__details__wrapper">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="lost-my-name__product__details-information right-align">
+                                <h3>Perfectly personalized</h3>
+                                <p>Choose an exquisitely-illustrated character that resembles your little one. They’ll feel like they’re truly the star of the story.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="lost-my-name__product__details-thumbnail">
+                                <img src="dist/images/wish-3.png" alt="Wish 3" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        
         <div class="lost-my-name__photo-gallery">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lost-my-name__photo-gallery__item">
-                            <img src="dist/images/story-1.jpg" alt="Gallery Item" />
-                            <p>Could write a caption.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lost-my-name__photo-gallery__item">
-                            <img src="dist/images/story-2.jpg" alt="Gallery Item" />
-                            <p>Finding letters.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lost-my-name__photo-gallery__item">
-                            <img src="dist/images/story-3.jpg" alt="Gallery Item" />
-                            <p>Discovers his name.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="lost-my-name__photo-gallery__item">
-                            <img src="dist/images/story-4.jpg" alt="Gallery Item" />
-                            <p>Happy little boy.</p>
-                        </div>
-                    </div>
+                <div class="lost-my-name__photo-gallery__title center-align">
+                    <p class="lost-my-name__quote-text">Watch our maverlous video</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="lost-my-name__contacts">
-            <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h3>Keep in youch for news &amp; offers</h3>
-                        <ul>
-                            <li class="pinterest"><a href="#"></a></li>
-                            <li class="facebook"><a href="#"></a></li>
-                            <li class="google-plus"><a href="#"></a></li>
-                            <li class="twiiter"><a href="#"></a></li>
-                        </ul>
+                        <div class="lost-my-name__photo-gallery__photos">
+                            <div class="grid-sizer"></div>
+                            <div class="lost-my-name__photo-gallery__photos-item full full-height">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="https://www.youtube.com/watch?v=vXmziYTwVV8" class="video-box">
+                                        <img src="dist/images/photo-1.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item double-height">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-1.jpg" class="image-box">
+                                        <img src="dist/images/story-1.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-2.jpg" class="image-box">
+                                        <img src="dist/images/story-2.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-3.jpg" class="image-box">
+                                        <img src="dist/images/story-3.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item double double-height">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <div class="quote center-align">
+                                        <div class="quote-wrapper">
+                                            <h3>"The most extraordinary and priceless gift I have ever given to any one before."</h1>
+                                            <p>Mr Smith, Australia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item double double-height">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-1.jpg" class="image-box">
+                                        <img src="dist/images/story-1.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-2.jpg" class="image-box">
+                                        <img src="dist/images/story-2.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-3.jpg" class="image-box">
+                                        <img src="dist/images/story-3.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lost-my-name__photo-gallery__photos-item full-width-tablet">
+                                <div class="lost-my-name__photo-gallery-photos__content">
+                                    <a href="dist/images/story-4.jpg" class="image-box">
+                                        <img src="dist/images/story-4.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,10 +299,17 @@
             </div>
         </div>
 
+        <a href="#" class="lost-my-name__icon icon-support"></a>
+        <a href="#" class="lost-my-name__icon icon-create-book"></a>
+
         <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery-migrate.min.js"></script>
         <script src="lib/tether.min.js"></script>
         <script src="lib/bootstrap.min.js"></script>
         <script src="lib/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="lib/slick.min.js"></script>
+        <script src="lib/masonry.pkgd.min.js"></script>
+        <script src="lib/jquery.magnific-popup.min.js"></script>
         <script src="dist/js/scripts.min.js"></script>
     </body>
 </html>

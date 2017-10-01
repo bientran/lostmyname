@@ -5,7 +5,8 @@ $pre: 'lost-my-name__footer';
     
     .#{$pre}__top {
         @extend %roboto-bold;
-        @extend %shadow-box;
+        border-top: 2px dashed $color-darker-brown;
+        border-bottom: 2px dashed $color-darker-brown;
         padding: 20px 0;
 
         .#{$pre}__nav {    

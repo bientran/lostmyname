@@ -105,6 +105,47 @@ a {
     }
 }
 
+%big-title-roboto {
+    @extend %roboto-bold;
+    font-size: 36px;
+    margin-bottom: 30px;
+
+    @include respond-to-max($tabletSize) {
+        font-size: 30px;
+    }
+}
+
+%medium-title-roboto {
+    @extend %roboto-bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+
+    @include respond-to-max($tabletSize) {
+        font-size: 26px;
+    }
+}
+
+%small-title-roboto {
+    @extend %roboto-bold;
+    font-size: 28px;
+    margin-bottom: 30px;
+
+    @include respond-to-max($tabletSize) {
+        font-size: 22px;
+    }
+}
+
+%quote-title {
+    @extend %gloria-hallelujah;
+    font-size: 28px;
+    margin-bottom: 30px;
+
+    @include respond-to-max($desktopSize) {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+
 .bold-text {
     @extend %roboto-bold;
 }
@@ -121,17 +162,58 @@ a {
 
 .lost-my-name__btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 15px;
     color: $color-white !important;
     @extend %roboto-bold;
+    font-size: $base-font-size;
     background-color: $color-light-red;
     text-align: center;
     outline: none;
     border: none;
     cursor: pointer;
+    box-shadow: 4px 4px 0px $color-darker-brown;
+    border-radius: 3px;
+
+    @include respond-to-max($tabletSize) {
+        font-size: $base-font-size-tablet;
+    }
 
     &:hover {
         @include set-opacity(0.8);
+    }
+}
+
+.lost-my-name__quote-text {
+    color: $color-lighter-red;
+    font-style: italic;
+    @extend %roboto-regular;
+}
+
+.lost-my-name__icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    position: fixed;
+    @include prefix((transform: translate3d(0, 0, 0)), webkit moz ms o);
+    bottom: 15px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 3px solid $color-light-green;
+
+    &:hover {
+        @include set-opacity(0.8);
+    }
+
+    &.icon-support {
+        left: 15px;
+        background: $color-white url(/images/support.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    &.icon-create-book {
+        right: 15px;
+        background: $color-white url(/images/add-book.png) no-repeat center center;
+        background-size: cover;
     }
 }
 
@@ -239,4 +321,37 @@ a {
     height: 1px;
     border-radius: 100%;
     background-color: $color-dark-brown;
+}
+
+.fillwidth {
+    width: 100%;
+    height: auto;
+    @extend %all-centered;
+}
+
+.fillheight {
+    height: 100%;
+    width: auto;
+    @extend %all-centered;
+}
+
+.left-align {
+    @include align-text(left)
+}
+
+.right-align {
+    @include align-text(right)
+}
+
+.center-align {
+    @include align-text(center)
+}
+
+
+.mfp-wrap {
+    .mfp-img {
+        @include respond-to-min($largerSize) {
+            max-width: 1200px !important;
+        }
+    }
 }
