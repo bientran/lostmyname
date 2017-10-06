@@ -9,11 +9,16 @@ $pre: 'lost-my-name__product';
 
 .#{$pre} {
     @include block-spacing($block-spacing-product, $block-spacing-product-tablet);
-    margin-top: 60px;
     
     .#{$pre}__photo-gallery {
         .ubislider-image-container {
             width: 100%;
+            overflow: hidden;
+
+            img {
+                max-width: auto !important;
+                max-height: auto !important;
+            }
         }
         .ubislider.ecommerce {
             width: 100%;

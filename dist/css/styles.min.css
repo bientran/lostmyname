@@ -339,7 +339,7 @@ a {
 
 .lost-my-name__btn, .gender-box label {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 12px 15px;
   color: #fff !important;
   font-size: 18px;
   background-color: #eb6157;
@@ -363,6 +363,36 @@ a {
 .lost-my-name__quote-text {
   color: #F16362;
   font-style: italic; }
+
+.lost-my-name__icon {
+  display: block;
+  width: 38px;
+  height: 38px;
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  bottom: 15px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 3px solid #c0d9c6; }
+  .lost-my-name__icon:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=8)";
+    -ms-filter: opacity(8);
+    filter: alpha(opacity=8);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8; }
+  .lost-my-name__icon.icon-support {
+    left: 15px;
+    background: #fff url(/images/support.jpg) no-repeat center center;
+    background-size: cover; }
+  .lost-my-name__icon.icon-create-book {
+    right: 15px;
+    background: #fff url(/images/add-book.png) no-repeat center center;
+    background-size: cover; }
 
 .rating .star:before {
   font-family: FontAwesome;
@@ -432,19 +462,35 @@ a {
   text-align: left !important; }
   .left-align * {
     text-align: left !important; }
+  @media only screen and (max-width: 575px) {
+    .left-align {
+      text-align: center !important; }
+      .left-align * {
+        text-align: center !important; } }
 
 .right-align {
   text-align: right !important; }
   .right-align * {
     text-align: right !important; }
+  @media only screen and (max-width: 575px) {
+    .right-align {
+      text-align: center !important; }
+      .right-align * {
+        text-align: center !important; } }
 
 .center-align {
   text-align: center !important; }
   .center-align * {
     text-align: center !important; }
+  @media only screen and (max-width: 575px) {
+    .center-align {
+      text-align: center !important; }
+      .center-align * {
+        text-align: center !important; } }
 
-.mfp-wrap .mfp-img {
-  max-width: 1200px !important; }
+@media only screen and (min-width: 1200px) {
+  .mfp-wrap .mfp-img {
+    max-width: 1200px !important; } }
 
 .lost-my-name__header {
   height: 60px;
@@ -599,7 +645,11 @@ a {
       height: 100%; }
 
 .lost-my-name__book-customizer {
-  bottom: 30px; }
+  bottom: 30px;
+  width: 950px; }
+  @media only screen and (max-width: 991px) {
+    .lost-my-name__book-customizer {
+      width: 95%; } }
   .lost-my-name__book-customizer .lost-my-name__book-customizer__title {
     margin-bottom: 30px; }
     .lost-my-name__book-customizer .lost-my-name__book-customizer__title h3 {
@@ -622,10 +672,14 @@ a {
       outline: none; }
     .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .lost-my-name__btn, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .gender-box label, .gender-box .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box label {
       width: 100%; }
-    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12 {
-      padding-right: 0; }
-      .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12:last-child {
-        padding-right: 15px; }
+    @media only screen and (min-width: 768px) {
+      .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12 {
+        padding-right: 0; }
+        .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12:last-child {
+          padding-right: 15px; } }
+    @media only screen and (max-width: 767px) {
+      .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box .row > .col-xs-12 {
+        margin: 10px 0; } }
   @media only screen and (max-width: 767px) {
     .lost-my-name__book-customizer .container .row > div {
       margin-bottom: 25px; }
@@ -633,10 +687,15 @@ a {
         margin: 0; } }
 
 .gender-box {
-  width: 120px;
-  max-width: 48%;
+  width: calc(50% - 10px);
+  float: left;
   font-size: 0;
   display: inline-block; }
+  @media only screen and (min-width: 640px) {
+    .gender-box {
+      position: relative; } }
+  .gender-box.have-margin {
+    margin-right: 20px; }
   .gender-box label {
     width: 100%;
     background-color: #767571; }
@@ -648,8 +707,11 @@ a {
     padding: 15px;
     border: none;
     border-top: 5px solid #c0d9c6;
-    width: 300px;
+    width: 290px;
     text-align: center; }
+    @media only screen and (max-width: 639px) {
+      .gender-box .dropdown-menu {
+        max-width: 100%; } }
     .gender-box .dropdown-menu li {
       display: inline-block;
       border: 2px dashed #eeebdc;
@@ -667,7 +729,7 @@ a {
         background-color: #c0d9c6;
         border-color: #c0d9c6; }
       .gender-box .dropdown-menu li img {
-        width: 70px; }
+        width: 66px; }
       .gender-box .dropdown-menu li:first-child {
         display: block;
         border: none;
@@ -709,7 +771,7 @@ a {
       .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item {
         height: 90px;
         width: 50%; }
-        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.double, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.triple, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full {
+        .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.double, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.triple, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.full-width-tablet {
           width: 100%; }
         .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item.one-two-height {
           height: 45px; }
@@ -805,6 +867,9 @@ a {
           height: 250px; } }
   .lost-my-name__product__details .lost-my-name__product__details-information h3 {
     text-align: left; }
+    @media only screen and (max-width: 575px) {
+      .lost-my-name__product__details .lost-my-name__product__details-information h3 {
+        margin-bottom: 15px; } }
   .lost-my-name__product__details .lost-my-name__product__details-information p {
     margin: 20px 0;
     text-align: left; }
@@ -815,8 +880,26 @@ a {
     max-width: 100%; }
     .lost-my-name__product__details.type-2 .lost-my-name__product__details__wrapper {
       margin-bottom: 25px; }
+      @media only screen and (min-width: 576px) {
+        .lost-my-name__product__details.type-2 .lost-my-name__product__details__wrapper.reversed {
+          position: relative; }
+          .lost-my-name__product__details.type-2 .lost-my-name__product__details__wrapper.reversed .row, .lost-my-name__product__details.type-2 .lost-my-name__product__details__wrapper.reversed .row .col-xs-12 {
+            position: initial; }
+          .lost-my-name__product__details.type-2 .lost-my-name__product__details__wrapper.reversed .lost-my-name__product__details-thumbnail {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            -o-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            width: 50%;
+            left: 0; } }
     .lost-my-name__product__details.type-2 .lost-my-name__product__details-thumbnail img {
       height: 200px; }
+    @media only screen and (max-width: 575px) {
+      .lost-my-name__product__details.type-2 .lost-my-name__product__details-information h3 {
+        margin-bottom: 10px; } }
     .lost-my-name__product__details.type-2 .lost-my-name__product__details-information p {
       margin: 20px 0; }
 

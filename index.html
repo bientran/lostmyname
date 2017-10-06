@@ -4,6 +4,7 @@
         <title>Lost My Name - Home Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
         <link rel="stylesheet" href="lib/bootstrap.min.css">
         <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="lib/slick.css"/>
@@ -11,6 +12,18 @@
         <link href="dist/css/styles.min.css" rel="stylesheet">
     </head>
     <body>
+        <div class="lost-my-name__information">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="lost-my-name__information-content">
+                            <p>The information about something will be in here for user to know!</p>
+                        </div>
+                        <a href="#" class="lost-my-name__information-close">X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="lost-my-name__header">
             <div class="container">
                 <div class="row">
@@ -52,22 +65,20 @@
             <div class="lost-my-name__banner__slider">
                 <div class="lost-my-name__banner__slider-item">
                     <div class="lost-my-name__banner__slider-item__thumbnail">
-                        <img src="https://lostmyname-prismic.imgix.net/cefcdb0f001eb52629d7f4d37f065c4f2ff38c2d_homepageherodesktop.jpg?auto=compress%2Cformat&w=1780" />
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://content.wonderbly.com/e5f47e6fe0da58a6f861b3ea54d4550abb8f7687_v4-mobile-homepage-hero.jpg?auto=compress%2Cformat&w=480">
+                            <source media="(max-width: 992px)" srcset="https://content.wonderbly.com/26663991898a6c8b7ce5e380af95312e40136923_v4-tablet-homepage-hero.jpg?auto=compress%2Cformat&w=1040">
+                            <img src="https://content.wonderbly.com/639b15245c7ebb7040a1e7623bc0a76d5565294d_v4-desktop-homepage-hero.jpg?auto=compress%2Cformat&w=1780" alt="Flowers" style="width:auto;">
+                        </picture>
                     </div>
                 </div>
                 <div class="lost-my-name__banner__slider-item">
                     <div class="lost-my-name__banner__slider-item__thumbnail">
-                        <img src="https://lostmyname-prismic.imgix.net/cefcdb0f001eb52629d7f4d37f065c4f2ff38c2d_homepageherodesktop.jpg?auto=compress%2Cformat&w=1780" />
-                    </div>
-                </div>
-                <div class="lost-my-name__banner__slider-item">
-                    <div class="lost-my-name__banner__slider-item__thumbnail">
-                        <img src="https://lostmyname-prismic.imgix.net/cefcdb0f001eb52629d7f4d37f065c4f2ff38c2d_homepageherodesktop.jpg?auto=compress%2Cformat&w=1780" />
-                    </div>
-                </div>
-                <div class="lost-my-name__banner__slider-item">
-                    <div class="lost-my-name__banner__slider-item__thumbnail">
-                        <img src="dist/images/banner.jpg" />
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://content.wonderbly.com/e5f47e6fe0da58a6f861b3ea54d4550abb8f7687_v4-mobile-homepage-hero.jpg?auto=compress%2Cformat&w=480">
+                            <source media="(max-width: 992px)" srcset="https://content.wonderbly.com/26663991898a6c8b7ce5e380af95312e40136923_v4-tablet-homepage-hero.jpg?auto=compress%2Cformat&w=1040">
+                            <img src="https://content.wonderbly.com/639b15245c7ebb7040a1e7623bc0a76d5565294d_v4-desktop-homepage-hero.jpg?auto=compress%2Cformat&w=1780" alt="Flowers" style="width:auto;">
+                        </picture>
                     </div>
                 </div>
             </div>

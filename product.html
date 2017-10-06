@@ -10,6 +10,18 @@
         <link href="dist/css/styles.min.css" rel="stylesheet">
     </head>
     <body>
+        <div class="lost-my-name__information">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="lost-my-name__information-content">
+                            <p>The information about something will be in here for user to know!</p>
+                        </div>
+                        <a href="#" class="lost-my-name__information-close">X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="lost-my-name__header">
             <div class="container">
                 <div class="row">
@@ -17,7 +29,6 @@
                         <div class="lost-my-name__header__navigation">
                             <a href="#" class="lost-my-name__header__logo">
                                 <img src="dist/images/logo.png" alt="Logo">
-                                <span>lostmy.name</span>
                             </a>
                             <div class="lost-my-name__header__right-nav">
                                 <div class="lost-my-name__header__right-nav-wrapper">
@@ -30,9 +41,9 @@
                                     <div class="mobile-device-mask"></div>
 
                                     <ul class="lost-my-name__header__nav">
-                                        <li class="active"><a href="#">Create</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li class="active"><a href="#"><i class="fa fa-gift"></i>Create</a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+                                        <li><a href="#"><i class="fa fa-phone"></i>Contact us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -107,37 +118,53 @@
             </div>
         </div>
         
-        <div class="lost-my-name__book-customizer type-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="lost-my-name__book-customizer__search-box">
-                            <form action="#" method="post">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-4 col-md-4">
-                                        <h4 class="lost-my-name__book-customizer__label"><span>1</span>Choose name</h4>
-                                        <input type="text" name="fullname" placeholder="Enter child's name" />
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-4">
-                                        <h4 class="lost-my-name__book-customizer__label"><span>2</span>Select gender</h4>
-                                        <div class="gender-box male">
-                                            <input id="male" type="radio" checked name="gender" value="male" />
-                                            <label for="male"></label>
-                                        </div>
-                                        <div class="gender-box female">
-                                            <input id="female" type="radio" name="gender" value="female" />
-                                            <label for="female"></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4 col-md-4">
-                                        <h4 class="lost-my-name__book-customizer__label"><span>3</span>Here's your book!</h4>
-                                        <input type="submit" value="Preview" name="submit" class="lost-my-name__btn" />
-                                    </div>
+        <div class="lost-my-name__book-customizer type-3">
+            <div class="lost-my-name__book-customizer__search-box">
+                <form action="#" method="post">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <input type="text" name="fullname" placeholder="Enter child's name" />
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <input type="hidden" id="gender" name="gender" value="genderAfterSelected" />
+                                <div class="gender-box have-margin" class="dropup">
+                                    <label for="male" data-toggle="dropdown">Boy</label>
+                                    <ul class="dropdown-menu">
+                                        <li>Please choose your character</li>
+                                        <li data-value="boy1">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-ii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="boy2">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-iii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="boy3">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-vi.png?auto=format,compress&q=70" />
+                                        </li>
+                                    </ul>
                                 </div>
-                            </form>
+                                <div class="gender-box" class="dropup">
+                                    <label for="female" data-toggle="dropdown">Girl</label>
+                                    <ul class="dropdown-menu">
+                                        <li>Please choose your character</li>
+                                        <li data-value="girl1">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-ii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="girl2">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-iii.png?auto=format,compress&q=70" />
+                                        </li>
+                                        <li data-value="girl3">
+                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-vi.png?auto=format,compress&q=70" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4">
+                                <input type="submit" value="Create Book" name="submit" class="lost-my-name__btn" />
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
 
@@ -341,22 +368,6 @@
             </div>
         </div>
 
-        <div class="lost-my-name__contacts">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h3>Keep in youch for news &amp; offers</h3>
-                        <ul>
-                            <li class="pinterest"><a href="#"></a></li>
-                            <li class="facebook"><a href="#"></a></li>
-                            <li class="google-plus"><a href="#"></a></li>
-                            <li class="twiiter"><a href="#"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="lost-my-name__footer">
             <div class="lost-my-name__footer__top">
                 <div class="container">
@@ -400,10 +411,15 @@
             </div>
         </div>
 
+        <a href="#" class="lost-my-name__icon icon-support"></a>
+        <a href="#" class="lost-my-name__icon icon-create-book"></a>
+
         <script src="lib/jquery.min.js"></script>
         <script src="lib/tether.min.js"></script>
         <script src="lib/bootstrap.min.js"></script>
         <script src="lib/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="lib/slick.min.js"></script>
+        <script src="lib/masonry.pkgd.min.js"></script>
         <script src="lib/ubislider.min.js"></script>
         <script src="dist/js/scripts.min.js"></script>
     </body>

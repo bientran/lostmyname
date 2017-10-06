@@ -3,13 +3,9 @@ $pre: 'lost-my-name__header';
 .#{$pre} {
     height: 60px;
     @extend %roboto-bold;
-    @extend %shadow;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 5;
     background-color: $color-brown;
+    @extend %shadow-box;
 
     .#{$pre}__navigation {
         .#{$pre}__logo {

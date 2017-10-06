@@ -1,8 +1,11 @@
 $pre: 'lost-my-name__banner';
 
 .#{$pre} {
-    margin-top: 60px;
     position: relative;
+
+    @include respond-to-max($tabletSize) {
+        margin-bottom: 150px;
+    }
     
     .#{$pre}__slider {
         .#{$pre}__slider-item {
@@ -19,6 +22,7 @@ $pre: 'lost-my-name__banner';
             .#{$pre}__slider-item__thumbnail {
                 height: 100%;
                 img {
+
                 }
             }
         }

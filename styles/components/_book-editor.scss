@@ -1,9 +1,9 @@
 $pre: 'lost-my-name__book-editor';
 
 .#{$pre} {
-    margin-top: 60px;
     @include block-spacing($block-spacing, $block-spacing-tablet);
     padding-bottom: 0;
+    padding-top: 50px;
 
     .#{$pre}__book {
         img {
@@ -16,17 +16,18 @@ $pre: 'lost-my-name__book-editor';
         
         .#{$pre}__tabbed {
             background-color: $color-white;
-            border-top: 1px solid $color-dark-brown;
-            border-bottom: 1px solid $color-dark-brown;
+            border-top: 1px solid $color-green;
+            border-bottom: 1px solid $color-green;
             margin-top: 30px;
 
             .wish {
                 cursor: pointer;
-                border-left: 1px solid $color-dark-brown;
+                border-left: 1px solid $color-green;
                 padding: 15px;
 
                 span {
                     font-size: 12px;
+                    color: $color-light-gray;
                 }
 
                 h3 {
@@ -49,7 +50,7 @@ $pre: 'lost-my-name__book-editor';
 
                         &:nth-last-child(2) {
                             .wish {
-                                border-right: 1px solid $color-dark-brown;
+                                border-right: 1px solid $color-green;
                             }
                         }
                     }
@@ -72,6 +73,8 @@ $pre: 'lost-my-name__book-editor';
                 h4 {
                     @extend %small-title;
                     margin-bottom: 10px;
+                    display: block;
+                    width: 100%;
                 }
 
                 p {
@@ -87,6 +90,7 @@ $pre: 'lost-my-name__book-editor';
                         border-radius: 3px;
                         border: 1px solid $color-darker-brown;
                         outline: none;
+                        @extend %roboto-regular;
                     }
                 }
 
@@ -106,6 +110,7 @@ $pre: 'lost-my-name__book-editor';
                         .lost-my-name__btn {
                             width: auto;
                             margin: 20px 0 0 auto;
+                            @extend %roboto-bold;
                         }
                     }
                 }
@@ -114,6 +119,7 @@ $pre: 'lost-my-name__book-editor';
                     .wish-item {
                         background-color: $color-white;
                         border-radius: 5px;
+                        @extend %shadow-box;
                         cursor: pointer;
 
                         img {

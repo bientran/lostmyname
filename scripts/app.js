@@ -1,5 +1,24 @@
 (function(){
     
+	var HeaderInformation = function(selector, btn) {
+		var $ele = $(selector);
+		var $closeBtn = $ele.find(btn);
+		var init = function() {
+			if (typeof $closeBtn !== 'undefined' && $closeBtn.length > 0) {
+				$closeBtn.on('click', function() {
+					$ele.slideUp();
+				});
+			}
+		};
+
+		return {
+			init: init
+		}
+	}
+
+	var headerInfor = new HeaderInformation('.lost-my-name__information', '.lost-my-name__information-close');
+	headerInfor.init();
+
 	var ToggleMenu = function () {
 		var leadershipHeader = $(".lost-my-name__header");
 		var menuWrapper = leadershipHeader.find(".lost-my-name__header__right-nav-wrapper");
@@ -109,15 +128,6 @@
     
     var menu = new ToggleMenu();
 	menu.init();
-	
-	var productImageSlider = new Slider('#product-image-slider', {
-		arrowsToggle: true,
-		type: 'ecommerce',
-		hideArrows: true,
-		autoSlideOnLastClick: true,
-		modalOnClick: true
-	});
-	productImageSlider.init();
 
 	var bookCutomizer = new BookCutomizer();
 	bookCutomizer.init();
@@ -209,8 +219,23 @@
 
 	var carouselSlider = new PhotoGallery('.lost-my-name__banner__slider', '.lost-my-name__banner__slider-item__thumbnail');
 	carouselSlider.init();
-	var carouselSlider = new PhotoGallery('.lost-my-name__photo-gallery__photos', '.lost-my-name__photo-gallery-photos__content');
-	carouselSlider.init();
+	var carouselSlider2 = new PhotoGallery('.lost-my-name__photo-gallery__photos', '.lost-my-name__photo-gallery-photos__content');
+	carouselSlider2.init();
+	var carouselSlider3 = new PhotoGallery('.lost-my-name__product__photo-gallery', '.ubislider-image-container');
+	carouselSlider3.init();
+
+	var productImageSlider = new Slider('#product-image-slider', {
+		arrowsToggle: true,
+		type: 'ecommerce',
+		hideArrows: true,
+		autoSlideOnLastClick: true,
+		modalOnClick: true,
+		onTopImageChange: function(e){
+			var carouselSlider3 = new PhotoGallery('.lost-my-name__product__photo-gallery', '.ubislider-image-container');
+			carouselSlider3.init();
+		}
+	});
+	productImageSlider.init();
 
 	// gender box active class
 	function setActiveGenderBox(inputBox) {
