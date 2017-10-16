@@ -15,7 +15,17 @@ $pre: 'lost-my-name__reviews';
 
     .#{$pre}-details {
         > .row {
-            margin: 30px 0;
+            margin-bottom: 25px;
+            margin-top: 25px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        @include respond-to-min($tabletSize) {
+            > .row {
+                margin: 30px 0;
+            }
         }
         .#{$pre}__user {
             h4 {
@@ -32,6 +42,7 @@ $pre: 'lost-my-name__reviews';
 
                 @include respond-to-max($tabletSize) {
                     font-size: 90%;
+                    margin-bottom: 10px;
                 }
             }
 

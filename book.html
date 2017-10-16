@@ -60,195 +60,160 @@
         </div>
 
         <div class="lost-my-name__book-editor">
-            <di class="lost-my-name__book-editor__book">
-                <div class="container">
+            <div class="container">
+                <div class="lost-my-name__book-editor__book">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <img src="dist/images/book.jpg" alt="Book">
                         </div>
                     </div>
                 </div>
-            </di>
-            <div class="lost-my-name__book-editor__options">
-                <div class="lost-my-name__book-editor__tabbed">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-2">
-                                <div class="first-wish wish" data-target="first-wish">
-                                    <span>Become</span>
-                                    <h3>King Jack</h3>
-                                </div>
+                <div class="lost-my-name__options-wrapper">
+                    <div class="lost-my-name__book-editor__options">
+                        <div class="lost-my-name__book-editor__tabbed">
+                            <div class="first-wish wish" data-target="first-wish">
+                                <i class="fa fa-user"></i>
                             </div>
-                            <div class="col-xs-12 col-sm-3 col-md-2">
-                                <div class="second-wish wish" data-target="second-wish">
-                                    <span>Fill the kingdom with</span>
-                                    <h3>Select characters</h3>
-                                </div>
+                            <div class="second-wish wish" data-target="second-wish">
+                                <i class="fa fa-users"></i>
                             </div>
-                            <div class="col-xs-12 col-sm-3 col-md-2">
-                                <div class="third-wish wish" data-target="third-wish">
-                                    <span>Get the monster serving of</span>
-                                    <h3>Select food</h3>
-                                </div>
+                            <div class="third-wish wish" data-target="third-wish">
+                                <i class="fa fa-cutlery"></i>
                             </div>
-                            <div class="col-xs-12 col-sm-3 col-md-2">
-                                <div class="dedication wish" data-target="dedication">
-                                    <span>Add dedication</span>
-                                    <h3>Write dedication</h3>
-                                </div>
+                            <div class="dedication wish" data-target="dedication">
+                                <i class="fa fa-comment"></i>
                             </div>
-                            <div class="col-xs-12 col-sm-3 col-md-4">
-                                <a href="#" class="lost-my-name__btn">Continue</a>
+                            <div class="continue">
+                                <i class="fa fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="lost-my-name__book-editor__suboptions">
-                    <div id="first-wish" class="wish-option">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <h4>First wish</h4>
-                                    <p>For your child's first wish, they become ruler of a kingdom</p>
-                                    <form action="#" method="post">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                                <input type="text" name="fullname" placeholder="Enter child's name" />
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                                <input type="hidden" id="gender" name="gender" value="genderAfterSelected" />
-                                                <div class="gender-box have-margin" class="dropup">
-                                                    <label for="male" data-toggle="dropdown">Boy</label>
-                                                    <ul class="dropdown-menu">
-                                                        <li>Please choose your character</li>
-                                                        <li data-value="boy1">
-                                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-ii.png?auto=format,compress&q=70" />
-                                                        </li>
-                                                        <li data-value="boy2">
-                                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-iii.png?auto=format,compress&q=70" />
-                                                        </li>
-                                                        <li data-value="boy3">
-                                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-vi.png?auto=format,compress&q=70" />
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="gender-box" class="dropup">
-                                                    <label for="female" data-toggle="dropdown">Girl</label>
-                                                    <ul class="dropdown-menu">
-                                                        <li>Please choose your character</li>
-                                                        <li data-value="girl1">
-                                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-ii.png?auto=format,compress&q=70" />
-                                                        </li>
-                                                        <li data-value="girl2">
-                                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-iii.png?auto=format,compress&q=70" />
-                                                        </li>
-                                                        <li data-value="girl3">
-                                                            <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-vi.png?auto=format,compress&q=70" />
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                                <input type="button" value="Done" name="submit" class="lost-my-name__btn" />
-                                            </div>
+    
+                    <div class="lost-my-name__book-editor__suboptions">
+                        <div id="first-wish" class="wish-option">
+                            <h4>First wish</h4>
+                            <p>For your child's first wish, they become ruler of a kingdom</p>
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 has-space">
+                                        <input type="text" name="fullname" placeholder="Enter child's name" />
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 has-space">
+                                        <input type="hidden" id="gender" name="gender" value="genderAfterSelected" />
+                                        <div class="gender-box have-margin" class="dropup">
+                                            <label for="male" data-toggle="dropdown">Boy</label>
+                                            <ul class="dropdown-menu">
+                                                <li>Please choose your character</li>
+                                                <li data-value="boy1">
+                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-ii.png?auto=format,compress&q=70" />
+                                                </li>
+                                                <li data-value="boy2">
+                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-iii.png?auto=format,compress&q=70" />
+                                                </li>
+                                                <li data-value="boy3">
+                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-vi.png?auto=format,compress&q=70" />
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </form>
+                                        <div class="gender-box" class="dropup">
+                                            <label for="female" data-toggle="dropdown">Girl</label>
+                                            <ul class="dropdown-menu">
+                                                <li>Please choose your character</li>
+                                                <li data-value="girl1">
+                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-ii.png?auto=format,compress&q=70" />
+                                                </li>
+                                                <li data-value="girl2">
+                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-iii.png?auto=format,compress&q=70" />
+                                                </li>
+                                                <li data-value="girl3">
+                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-vi.png?auto=format,compress&q=70" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <input type="button" value="Done" name="submit" class="lost-my-name__btn" />
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                    </div>
-                    <div id="second-wish" class="wish-option">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <h4>Second wish</h4>
-                                    <p>For their next wish, the kingdom gets filled with the things they love</p>
-                                    <div class="wish-items">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                                <div class="wish-item">
-                                                    <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
-                                                    <p>Dinosaurs</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                                <div class="wish-item">
-                                                    <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
-                                                    <p>Superheroes</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                                <div class="wish-item">
-                                                    <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
-                                                    <p>Animals</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                                <div class="wish-item">
-                                                    <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
-                                                    <p>Princesses</p>
-                                                </div>
-                                            </div>
+                        <div id="second-wish" class="wish-option">
+                            <h4>Second wish</h4>
+                            <p>For their next wish, the kingdom gets filled with the things they love</p>
+                            <div class="wish-items">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
+                                            <p>Dinosaurs</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
+                                            <p>Superheroes</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
+                                            <p>Animals</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
+                                            <p>Princesses</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="third-wish" class="wish-option">
-                        <div class="container">
-                            <div class="row div col-xs-12 col-sm-12 col-md-12">
-                                <h4>Third wish</h4>
-                                <p>For their final wish, they get a plate of food that they love</p>
-                                <div class="wish-items">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <div class="wish-item">
-                                                <img src="dist/images/third-wish-1.jpg" alt="Second wish 1">
-                                                <p>Pasta</p>
-                                            </div>
+                        <div id="third-wish" class="wish-option">
+                            <h4>Third wish</h4>
+                            <p>For their final wish, they get a plate of food that they love</p>
+                            <div class="wish-items">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/third-wish-1.jpg" alt="Second wish 1">
+                                            <p>Pasta</p>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <div class="wish-item">
-                                                <img src="dist/images/third-wish-2.jpg" alt="Second wish 2">
-                                                <p>Pizza</p>
-                                            </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/third-wish-2.jpg" alt="Second wish 2">
+                                            <p>Pizza</p>
                                         </div>
-                                        <div class="wcol-xs-12 col-sm-6 col-md-3">
-                                            <div class="wish-item">
-                                                <img src="dist/images/third-wish-3.jpg" alt="Second wish 3">
-                                                <p>Ice Cream</p>
-                                            </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/third-wish-3.jpg" alt="Second wish 3">
+                                            <p>Ice Cream</p>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <div class="wish-item">
-                                                <img src="dist/images/third-wish-4.jpg" alt="Second wish 4">
-                                                <p>Chicken</p>
-                                            </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="wish-item">
+                                            <img src="dist/images/third-wish-4.jpg" alt="Second wish 4">
+                                            <p>Chicken</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="dedication" class="wish-option">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <h4>Write a special message</h4>
-                                    <p>We'll include it at the beginning of their book</p>
-                                    <div class="dedication-form">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                                <img src="dist/images/dedication.jpg" alt="Dedication image">
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                                <form action="#" method="post">
-                                                    <textarea></textarea>
-                                                    <input type="submit" value="Done" class="lost-my-name__btn" >
-                                                </form>
-                                            </div>
-                                        </div>
+                        <div id="dedication" class="wish-option">
+                            <h4>Write a special message</h4>
+                            <p>We'll include it at the beginning of their book</p>
+                            <div class="dedication-form">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 has-space">
+                                        <img src="dist/images/dedication.jpg" alt="Dedication image">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <form action="#" method="post">
+                                            <textarea class="has-space"></textarea>
+                                            <input type="submit" value="Done" class="lost-my-name__btn" >
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -262,10 +227,10 @@
             <div class="container">
                 <div class="lost-my-name__reviews-title">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
                             <h1>Reviews</h1>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="rating type-2 five">
                                 <span class="rating-score"><span>9.8</span>/10</span>
                                 <span class="star"></span>

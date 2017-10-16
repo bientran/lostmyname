@@ -4,6 +4,7 @@ $pre: 'lost-my-name__book-editor';
     @include block-spacing($block-spacing, $block-spacing-tablet);
     padding-bottom: 0;
     padding-top: 50px;
+    position: relative;
 
     .#{$pre}__book {
         img {
@@ -12,126 +13,175 @@ $pre: 'lost-my-name__book-editor';
     }
 
     .#{$pre}__options {
-        position: relative;
-        
+        @extend %vertical-centered;
+        right: -10px;
         .#{$pre}__tabbed {
-            background-color: $color-white;
-            border-top: 1px solid $color-green;
-            border-bottom: 1px solid $color-green;
-            margin-top: 30px;
 
             .wish {
                 cursor: pointer;
-                border-left: 1px solid $color-green;
-                padding: 15px;
+                border-radius: 50%;
+                padding: 5px;
+                display: block;
+                background-color: $color-white;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                @extend %shadow-box;
+                margin: 15px 8px;
+                @include prefix((transition: all 0.35s ease-in-out), webkit moz ms o);
 
-                span {
-                    font-size: 12px;
-                    color: $color-light-gray;
+                @include respond-to-max($tabletSize) {
+                    padding: 9px;
+                    display: inline-block;
+                    margin-top: 0;
+                    margin-bottom: 0;
                 }
 
-                h3 {
-                    @extend %roboto-bold;
+                .fa {
+                    font-size: 14px;
                 }
 
                 &.active {
-                    background-color: $color-brown;
+                    background-color: $color-lighter-red;
+                    color: $color-white;
+                }
+
+                @include respond-to-max($tabletSize) {
+                    &.first-wish {
+                        margin-left: 0;
+                    }
                 }
             }
 
-            .container {
-                .row {
-                    > div {
-                        padding: 0;
-                        &:last-child {
-                            text-align: right;
-                            padding: 10px;
-                        }
+            .continue {
+                @extend .wish;
+                width: 50px;
+                height: 50px;
+                padding: 14px;
+                margin: 15px 0;
+                background-color: $color-light-green;
+                color: $color-white;
+                margin-top: 40px;
 
-                        &:nth-last-child(2) {
-                            .wish {
-                                border-right: 1px solid $color-green;
-                            }
-                        }
-                    }
+                @include respond-to-max($tabletSize) {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: 30px;
+                }
+                
+                .fa {
+                    font-size: 20px;
                 }
             }
         }
 
-        .#{$pre}__suboptions {
-            .wish-option {
-                position: absolute;
-                bottom: 100%;
-                left: 0;
-                width: 100%;
-                z-index: 2;
-                padding: 20px 0;
-                background-color: $color-brown;
-                box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
-                display: none;
+        @include respond-to-max($tabletSize) {
+            left: 0;
+            right: auto;
+            top: auto;
+            bottom: -60px;
+            @include prefix((transform: none), webkit moz ms o);
+            width: 100%;
+            text-align: center
+        }
+    }
 
-                h4 {
-                    @extend %small-title;
-                    margin-bottom: 10px;
+    .#{$pre}__suboptions {
+        .wish-option {
+            padding: 15px;
+            background-color: $color-brown;
+            @extend %vertical-centered;
+            right: 50px;
+            width: 300px;
+            height: auto;
+            background-color: $color-white;
+            z-index: 10;
+            border-radius: 10px;
+            @extend %shadow-box;
+            display: none;
+
+            @include respond-to-max($tabletSize) {
+                @include prefix((transform: translate(-50%, 0)), webkit moz ms o);
+                left: 50%;
+                top: 0;
+                right: auto;
+                bottom: auto;
+            }
+    
+            h4 {
+                @extend %tiny-title;
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+            }
+    
+            p {
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+    
+            form {
+                font-size: 14px;
+                input, textarea {
+                    padding: 10px;
                     display: block;
                     width: 100%;
+                    border-radius: 3px;
+                    border: 1px solid $color-darker-brown;
+                    outline: none;
+                    @extend %roboto-regular;
                 }
-
-                p {
-                    margin-bottom: 35px;
+            }
+    
+            .dedication-form {
+                img {
+                    width: 100%;
                 }
-
+    
                 form {
-                    margin: 30px 0;
-                    input, textarea {
-                        padding: 10px;
-                        display: block;
-                        width: 100%;
-                        border-radius: 3px;
-                        border: 1px solid $color-darker-brown;
-                        outline: none;
-                        @extend %roboto-regular;
+                    text-align: right;
+                    margin: 0;
+                    textarea {
+                        height: 100px;
+                        resize: none;
                     }
-                }
-
-                .dedication-form {
-                    img {
-                        width: 100%;
-                    }
-
-                    form {
-                        text-align: right;
-                        margin: 0;
-                        textarea {
-                            height: 300px;
-                            resize: none;
-                        }
-
-                        .lost-my-name__btn {
-                            width: auto;
-                            margin: 20px 0 0 auto;
-                            @extend %roboto-bold;
-                        }
-                    }
-                }
-
-                .wish-items {
-                    .wish-item {
-                        background-color: $color-white;
-                        border-radius: 5px;
-                        @extend %shadow-box;
-                        cursor: pointer;
-
-                        img {
-                            width: 100%;
-                        }
-
-                        p {
-                            padding: 5px 10px 10px 10px;
-                        }
+    
+                    .lost-my-name__btn {
+                        @extend %roboto-bold;
                     }
                 }
             }
+    
+            .wish-items {
+                .wish-item {
+                    background-color: $color-white;
+                    border-radius: 5px;
+                    @extend %shadow-box;
+                    cursor: pointer;
+    
+                    img {
+                        width: 100%;
+                    }
+    
+                    p {
+                        padding: 5px;
+                        text-align: center;
+                        margin-top: -6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.has-space {
+    margin-bottom: 15px;
+}
+
+@include respond-to-max($tabletSize) {
+    .row {
+        .col-xs-6 {
+            width: 50%;
         }
     }
 }

@@ -110,13 +110,20 @@
 					var $this = $(this);
 					var target = $this.attr('data-target');
 
+					// remove active wish
+					wish.removeClass('active');
+					$this.addClass('active');
+
 					// hide all wish options
-					wishOptions.hide();
-					$("#" + target).show();
+					wishOptions.fadeOut();
+					$("#" + target).fadeIn();
 				});
 
 				$(document).on('click', function(event) {
-					if ($(event.target).parents('.lost-my-name__book-editor__options').length == 0) wishOptions.hide();
+					if ($(event.target).parents('.lost-my-name__options-wrapper').length == 0) {
+						wishOptions.fadeOut();
+						wish.removeClass('active');
+					}
 				});
 			}
 		}
