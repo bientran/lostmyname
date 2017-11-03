@@ -71,14 +71,11 @@
                 <div class="lost-my-name__options-wrapper">
                     <div class="lost-my-name__book-editor__options">
                         <div class="lost-my-name__book-editor__tabbed">
-                            <div class="first-wish wish" data-target="first-wish">
+                            <div class="first-wish wish active" data-target="first-wish">
                                 <i class="fa fa-user"></i>
                             </div>
                             <div class="second-wish wish" data-target="second-wish">
                                 <i class="fa fa-users"></i>
-                            </div>
-                            <div class="third-wish wish" data-target="third-wish">
-                                <i class="fa fa-cutlery"></i>
                             </div>
                             <div class="dedication wish" data-target="dedication">
                                 <i class="fa fa-comment"></i>
@@ -138,64 +135,181 @@
                             </form>
                         </div>
                         <div id="second-wish" class="wish-option">
-                            <h4>Second wish</h4>
-                            <p>For their next wish, the kingdom gets filled with the things they love</p>
-                            <div class="wish-items">
-                                <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
-                                            <p>Dinosaurs</p>
-                                        </div>
+                            <div class="tabs">
+                                <div class="tabs-wrapper">
+                                    <div class="wish active" data-target="first-adventure">
+                                        <i class="fa fa-ship"></i>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
-                                            <p>Superheroes</p>
-                                        </div>
+                                    <div class="wish" data-target="second-adventure">
+                                        <i class="fa fa-tint"></i>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
-                                            <p>Animals</p>
-                                        </div>
+                                    <div class="wish" data-target="third-adventure">
+                                        <i class="fa fa-area-chart"></i>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
-                                            <p>Princesses</p>
+                                    <div class="wish" data-target="forth-adventure">
+                                        <i class="fa fa-area-chart"></i>
+                                    </div>
+                                    <div class="wish" data-target="fifth-adventure">
+                                        <i class="fa fa-skyatlas"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="first-adventure" class="character-tab active">
+                                <h4>First adventure</h4>
+                                <p>For their final wish, they get a plate of food that they love</p>
+                                <div class="wish-items">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-1.jpg" alt="Second wish 1">
+                                                <p>Pasta</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-2.jpg" alt="Second wish 2">
+                                                <p>Pizza</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-3.jpg" alt="Second wish 3">
+                                                <p>Ice Cream</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/third-wish-4.jpg" alt="Second wish 4">
+                                                <p>Chicken</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="third-wish" class="wish-option">
-                            <h4>Third wish</h4>
-                            <p>For their final wish, they get a plate of food that they love</p>
-                            <div class="wish-items">
-                                <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/third-wish-1.jpg" alt="Second wish 1">
-                                            <p>Pasta</p>
+                            <div id="second-adventure" class="character-tab">
+                                <h4>Second adventure</h4>
+                                <p>For their next wish, the kingdom gets filled with the things they love</p>
+                                <div class="wish-items">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
+                                                <p>Dinosaurs</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
+                                                <p>Superheroes</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
+                                                <p>Animals</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
+                                                <p>Princesses</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/third-wish-2.jpg" alt="Second wish 2">
-                                            <p>Pizza</p>
+                                </div>
+                            </div>
+                            <div id="third-adventure" class="character-tab">
+                                <h4>Third adventure</h4>
+                                <p>For their next wish, the kingdom gets filled with the things they love</p>
+                                <div class="wish-items">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
+                                                <p>Dinosaurs</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
+                                                <p>Superheroes</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
+                                                <p>Animals</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
+                                                <p>Princesses</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/third-wish-3.jpg" alt="Second wish 3">
-                                            <p>Ice Cream</p>
+                                </div>
+                            </div>
+                            <div id="forth-adventure" class="character-tab">
+                                <h4>Forth adventure</h4>
+                                <p>For their next wish, the kingdom gets filled with the things they love</p>
+                                <div class="wish-items">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
+                                                <p>Dinosaurs</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
+                                                <p>Superheroes</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
+                                                <p>Animals</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
+                                                <p>Princesses</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <div class="wish-item">
-                                            <img src="dist/images/third-wish-4.jpg" alt="Second wish 4">
-                                            <p>Chicken</p>
+                                </div>
+                            </div>
+                            <div id="fifth-adventure" class="character-tab">
+                                <h4>Fifth adventure</h4>
+                                <p>For their next wish, the kingdom gets filled with the things they love</p>
+                                <div class="wish-items">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-1.jpg" alt="Second wish 1">
+                                                <p>Dinosaurs</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-2.jpg" alt="Second wish 2">
+                                                <p>Superheroes</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-3.jpg" alt="Second wish 3">
+                                                <p>Animals</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="wish-item">
+                                                <img src="dist/images/second-wish-4.jpg" alt="Second wish 4">
+                                                <p>Princesses</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

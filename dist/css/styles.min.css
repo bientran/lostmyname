@@ -423,7 +423,7 @@ a {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%); }
 
-.lost-my-name__book-customizer, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__title:after, .lost-my-name__product__details .lost-my-name__product__details__title:after {
+.lost-my-name__book-customizer, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__title:after, .lost-my-name__product__details .lost-my-name__product__details__title:after, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -1194,6 +1194,8 @@ a {
     z-index: 10;
     border-radius: 10px;
     display: none; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option#second-wish {
+      margin-top: 38px; }
     @media only screen and (max-width: 767px) {
       .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option {
         -webkit-transform: translate(-50%, 0);
@@ -1202,7 +1204,7 @@ a {
         -o-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         left: 50%;
-        top: 0;
+        top: calc(100% + 70px);
         right: auto;
         bottom: auto; } }
     .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option h4 {
@@ -1239,6 +1241,34 @@ a {
         padding: 5px;
         text-align: center;
         margin-top: -6px; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs {
+      position: relative; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper {
+        top: -57px;
+        width: 100%;
+        text-align: center;
+        z-index: 10; }
+        @media only screen and (max-width: 767px) {
+          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper {
+            top: -52px; } }
+        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .continue, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .continue {
+          display: inline-block;
+          padding: 10px;
+          background-color: #fff;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          width: 50px;
+          cursor: pointer; }
+          @media only screen and (max-width: 767px) {
+            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .continue, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .continue {
+              box-shadow: 0 -3px 2px #d6d4d4; } }
+          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish.active, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .active.continue, .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .active.continue {
+            background-color: #F16362;
+            color: #fff; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .character-tab {
+      display: none; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .character-tab.active {
+        display: block; }
 
 .has-space {
   margin-bottom: 15px; }

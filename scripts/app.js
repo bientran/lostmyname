@@ -103,9 +103,11 @@
 		var ele = $(".lost-my-name__book-editor");
 		var wish = ele.find(".lost-my-name__book-editor__tabbed .wish");
 		var wishOptions = ele.find(".wish-option");
+		var adventuresTabs = ele.find("#second-wish .tabs .wish");
+		var adventuresContents = ele.find('#second-wish .character-tab');
 
 		var init = function() {
-			if (ele.length > 0 && wish.length > 0) {
+			if (ele.length > 0 && wish.length > 0 && adventuresTabs.length > 0) {
 				wish.on('click', function() {
 					var $this = $(this);
 					var target = $this.attr('data-target');
@@ -117,6 +119,19 @@
 					// hide all wish options
 					wishOptions.fadeOut();
 					$("#" + target).fadeIn();
+				});
+
+				adventuresTabs.on('click', function() {
+					var $this = $(this);
+					var target = $this.attr('data-target');
+
+					// remove active wish
+					adventuresTabs.removeClass('active');
+					$this.addClass('active');
+
+					// hide all wish options
+					adventuresContents.hide();
+					$('#' + target).fadeIn();
 				});
 
 				$(document).on('click', function(event) {

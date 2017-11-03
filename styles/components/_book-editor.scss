@@ -100,10 +100,18 @@ $pre: 'lost-my-name__book-editor';
             @extend %shadow-box;
             display: none;
 
+            &#first-wish {
+                display: block;
+            }
+
+            &#second-wish {
+                margin-top: 38px;
+            }
+
             @include respond-to-max($tabletSize) {
                 @include prefix((transform: translate(-50%, 0)), webkit moz ms o);
                 left: 50%;
-                top: 0;
+                top: calc(100% + 70px);
                 right: auto;
                 bottom: auto;
             }
@@ -168,6 +176,49 @@ $pre: 'lost-my-name__book-editor';
                         text-align: center;
                         margin-top: -6px;
                     }
+                }
+            }
+
+            .tabs {
+                position: relative;
+
+                .tabs-wrapper {
+                    @extend %horizontal-centered;
+                    top: -57px;
+                    width: 100%;
+                    text-align: center;
+                    z-index: 10;
+
+                    @include respond-to-max($tabletSize) {
+                        top: -52px;
+                    }
+
+                    .wish {
+                        display: inline-block;
+                        padding: 10px;
+                        background-color: $color-white;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        width: 50px;
+                        cursor: pointer;
+                        
+                        @include respond-to-max($tabletSize) {
+                            box-shadow: 0 -3px 2px $color-lighter-gray;
+                        }
+
+                        &.active {
+                            background-color: $color-lighter-red;
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+
+            .character-tab {
+                display: none;
+
+                &.active {
+                    display: block;
                 }
             }
         }
