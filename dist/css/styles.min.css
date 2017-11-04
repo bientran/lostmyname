@@ -880,6 +880,9 @@ a {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     z-index: 10; }
+    .lost-my-name__book-customizer .fixed .gender-box .dropdown-menu {
+      bottom: auto;
+      top: 60px; }
 
 .gender-box {
   width: calc(50% - 10px);

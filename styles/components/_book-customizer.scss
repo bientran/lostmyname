@@ -99,6 +99,13 @@ $pre: 'lost-my-name__book-customizer';
         width: 100%;
         @include prefix((transform: translate3d(0, 0, 0)), webkit moz ms o);
         z-index: 10;
+
+        .gender-box {
+            .dropdown-menu {
+                bottom: auto;
+                top: 60px;
+            }
+        }
     }
 }
 
