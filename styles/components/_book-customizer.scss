@@ -91,6 +91,15 @@ $pre: 'lost-my-name__book-customizer';
             padding: 40px 0;
         }
     }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include prefix((transform: translate3d(0, 0, 0)), webkit moz ms o);
+        z-index: 10;
+    }
 }
 
 .gender-box {
@@ -120,12 +129,18 @@ $pre: 'lost-my-name__book-customizer';
     .dropdown-menu {
         top: auto;
         bottom: calc(100% + 10px);
-        padding: 15px;
+        padding: 15px 10px;
         border: none;
         @extend %shadow-box;
         border-top: 5px solid $color-light-green;
-        width: 290px;
+        width: 240px;
         text-align: center;
+        left: 15px;
+
+        &.girl {
+            left: auto;
+            right: 15px;
+        }
         
 		@include respond-to-max($phoneLandscape) {
 			max-width: 100%;
@@ -148,7 +163,7 @@ $pre: 'lost-my-name__book-customizer';
             }
 
             img {
-                width: 66px;
+                width: 38px;
             }
 
             &:first-child {

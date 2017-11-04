@@ -16,6 +16,41 @@
 		}
 	}
 
+	var FixedNavigation = function(selector) {
+		var ele = $(selector);
+		var eleTop = 0;
+		var parent = ele.parent();
+
+		var init = function() {
+			if (typeof ele !== 'undefined' && ele.length > 0 && typeof ele.offset() !== 'undefined') {
+				parent.css('min-height', ele.outerHeight());
+				$(window).on('resize orientationchange', $.debounce(5, function() {
+					parent.css('min-height', ele.outerHeight());
+				}));
+
+				$(window).on('scroll', $.debounce(5, function() {
+					var elePos = ele.hasClass('fixed') ? { top: 0, left: 0 } : ele.offset();
+
+					if (elePos.top <= 0) elePos.top = eleTop;
+
+					if ($(window).scrollTop() >= elePos.top) {
+						ele.addClass('fixed');
+						eleTop = elePos.top
+					} else {
+						ele.removeClass('fixed');
+					}
+				}))
+			}
+		}
+
+		return {
+			init: init
+		}
+	}
+
+	var bookCustomizerNav = new FixedNavigation('.lost-my-name__book-customizer__search-box');
+	bookCustomizerNav.init();
+
 	var headerInfor = new HeaderInformation('.lost-my-name__information', '.lost-my-name__information-close');
 	headerInfor.init();
 
@@ -105,9 +140,14 @@
 		var wishOptions = ele.find(".wish-option");
 		var adventuresTabs = ele.find("#second-wish .tabs .wish");
 		var adventuresContents = ele.find('#second-wish .character-tab');
+		var togglePanel = ele.find(".toggle");
+		var panel = ele.find('.lost-my-name__book-editor-wrapper');
 
 		var init = function() {
 			if (ele.length > 0 && wish.length > 0 && adventuresTabs.length > 0) {
+				// scroll to book editor
+				$("html, body").animate({ scrollTop: ele.offset().top }, 500);
+
 				wish.on('click', function() {
 					var $this = $(this);
 					var target = $this.attr('data-target');
@@ -117,8 +157,10 @@
 					$this.addClass('active');
 
 					// hide all wish options
-					wishOptions.fadeOut();
-					$("#" + target).fadeIn();
+					wishOptions.hide();
+					$("#" + target).show();
+
+					return false;
 				});
 
 				adventuresTabs.on('click', function() {
@@ -131,15 +173,34 @@
 
 					// hide all wish options
 					adventuresContents.hide();
-					$('#' + target).fadeIn();
+					$('#' + target).show();
+
+					return false;
 				});
 
-				$(document).on('click', function(event) {
-					if ($(event.target).parents('.lost-my-name__options-wrapper').length == 0) {
-						wishOptions.fadeOut();
-						wish.removeClass('active');
-					}
+				togglePanel.on('click', function() {
+					var $this = $(this);
+					var target = $this. parents('.lost-my-name__book-editor-wrapper');
+
+					// Toggle show hide
+					target.toggleClass('active')
+					.promise().done(function() {
+						var isActive = $(this).hasClass('active');
+
+						if (!isActive) {
+							$this.removeClass('active');
+						} else {
+							$this.addClass('active');
+						}
+					})
+					return false;
 				});
+
+				// $(document).on('click', function(event) {
+				// 	if ($(event.target).parents('.lost-my-name__options-wrapper').length == 0) {
+				// 		panel.removeClass('active');
+				// 	}
+				// });
 			}
 		}
 
@@ -193,15 +254,24 @@
 
     var PhotoGallery = function (selector, child) {
 		var photoGallery = $(selector);
-        var photos = photoGallery.find(child + " img");
+		var photos = photoGallery.find(child + " img");
+		var isBanner = selector.indexOf('banner') != -1;
 
 		var resizeImages = function() {
 			photos.imgLoad(function () {
 			    var $this = $(this);
 			    var parentInfor = {
-			        width: $this.parent().width(),
-			        height: $this.parent().height()
-			    };
+			        width: $this.parents().width(),
+			        height: $this.parents().height()
+				};
+				
+				if (isBanner) {
+					parentInfor = {
+						width: $this.parents(selector).width(),
+						height: $this.parents(selector).height()
+					};
+				}
+				
 			    var imgInfor = {
 			        width: $this.width(),
 			        height: $this.height()
@@ -299,7 +369,6 @@
 				_this.addClass('active');
 			}
 		});
-		
 	}
 	setActiveGenderBox('#gender');
 

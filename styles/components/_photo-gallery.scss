@@ -123,6 +123,36 @@ $block-width-tablet: 50%;
                     height: 100%;
                     overflow: hidden;
                 }
+
+                .video-box {
+                    &:before,
+                    &:after {
+                        content: '';
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $color-black-one-four;
+                        z-index: 2;
+                    }
+
+                    &:after {
+                        @extend %all-centered;
+                        width: 70px;
+                        height: 70px;
+                        background: transparent url(/dist/images/play-button.png) no-repeat center center;
+                        background-size: cover;
+                        z-index: 3;
+                        
+                    }
+
+                    &:hover {
+                        @include set-opacity(0.8);
+                    }
+                }
             }
 
             .quote {
@@ -134,6 +164,7 @@ $block-width-tablet: 50%;
                 .quote-wrapper {
                     @extend %all-centered;
                     width: 100%;
+                    color: $color-white;
 
                     h3 {
                         @extend %quote-title;

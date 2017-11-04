@@ -41,8 +41,8 @@
                                     <div class="mobile-device-mask"></div>
 
                                     <ul class="lost-my-name__header__nav">
-                                        <li class="active"><a href="#"><i class="fa fa-gift"></i>Create</a></li>
-                                        <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+                                        <li class="active"><a href="product.html"><i class="fa fa-gift"></i>Product</a></li>
+                                        <li><a href="book.html"><i class="fa fa-rss"></i>Book</a></li>
                                         <li><a href="#"><i class="fa fa-phone"></i>Contact us</a></li>
                                     </ul>
                                 </div>
@@ -68,20 +68,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="lost-my-name__options-wrapper">
+                <div class="lost-my-name__book-editor-wrapper active">
                     <div class="lost-my-name__book-editor__options">
                         <div class="lost-my-name__book-editor__tabbed">
                             <div class="first-wish wish active" data-target="first-wish">
                                 <i class="fa fa-user"></i>
+                                <span>Choose characters</span>
                             </div>
                             <div class="second-wish wish" data-target="second-wish">
                                 <i class="fa fa-users"></i>
+                                <span>Choose adventures</span>
                             </div>
                             <div class="dedication wish" data-target="dedication">
                                 <i class="fa fa-comment"></i>
-                            </div>
-                            <div class="continue">
-                                <i class="fa fa-arrow-right"></i>
+                                <span>Write dedication</span>
                             </div>
                         </div>
                     </div>
@@ -99,37 +99,40 @@
                                         <input type="hidden" id="gender" name="gender" value="genderAfterSelected" />
                                         <div class="gender-box have-margin" class="dropup">
                                             <label for="male" data-toggle="dropdown">Boy</label>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu boy">
                                                 <li>Please choose your character</li>
                                                 <li data-value="boy1">
-                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-ii.png?auto=format,compress&q=70" />
+                                                    <img src="images/boy-1.png" />
                                                 </li>
                                                 <li data-value="boy2">
-                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-iii.png?auto=format,compress&q=70" />
+                                                    <img src="images/boy-2.png" />
                                                 </li>
                                                 <li data-value="boy3">
-                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/boy-type-vi.png?auto=format,compress&q=70" />
+                                                    <img src="images/boy-3.png" />
+                                                </li>
+                                                <li data-value="boy4">
+                                                    <img src="images/boy-4.png" />
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="gender-box" class="dropup">
                                             <label for="female" data-toggle="dropdown">Girl</label>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu girl">
                                                 <li>Please choose your character</li>
                                                 <li data-value="girl1">
-                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-ii.png?auto=format,compress&q=70" />
+                                                    <img src="images/girl-1.png" />
                                                 </li>
                                                 <li data-value="girl2">
-                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-iii.png?auto=format,compress&q=70" />
+                                                    <img src="images/girl-2.png" />
                                                 </li>
                                                 <li data-value="girl3">
-                                                    <img src="https://lmn-website-assets.imgix.net/products/kingdom-of-you/adventurers/girl-type-vi.png?auto=format,compress&q=70" />
+                                                    <img src="images/girl-3.png" />
+                                                </li>
+                                                <li data-value="girl4">
+                                                    <img src="images/girl-4.png" />
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
-                                        <input type="button" value="Done" name="submit" class="lost-my-name__btn" />
                                     </div>
                                 </div>
                             </form>
@@ -139,18 +142,23 @@
                                 <div class="tabs-wrapper">
                                     <div class="wish active" data-target="first-adventure">
                                         <i class="fa fa-ship"></i>
+                                        <span>Ship</span>
                                     </div>
                                     <div class="wish" data-target="second-adventure">
                                         <i class="fa fa-tint"></i>
+                                        <span>Swim</span>
                                     </div>
                                     <div class="wish" data-target="third-adventure">
                                         <i class="fa fa-area-chart"></i>
+                                        <span>Moutain</span>
                                     </div>
                                     <div class="wish" data-target="forth-adventure">
                                         <i class="fa fa-area-chart"></i>
+                                        <span>Hero</span>
                                     </div>
                                     <div class="wish" data-target="fifth-adventure">
                                         <i class="fa fa-skyatlas"></i>
+                                        <span>Sky</span>
                                     </div>
                                 </div>
                             </div>
@@ -333,134 +341,30 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="lost-my-name__reviews">
-            <div class="container">
-                <div class="lost-my-name__reviews-title">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <h1>Reviews</h1>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="rating type-2 five">
-                                <span class="rating-score"><span>9.8</span>/10</span>
-                                <span class="star"></span>
-                                <span class="star"></span>
-                                <span class="star"></span>
-                                <span class="star"></span>
-                                <span class="star"></span>
-                            </div>
-                        </div>
+                    <div class="continue-wrapper">
+                        <a class="continue lost-my-name__btn" href="#">
+                            Continue <i class="fa fa-arrow-right"></i>
+                        </a>
                     </div>
-                </div>
-                <div class="lost-my-name__reviews-details">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-3">
-                            <div class="lost-my-name__reviews__user">
-                                <div class="rating three">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                </div>
-                                <h4>Rebecca Mitcheson</h4>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-9">
-                            <div class="lost-my-name__reviews__comment">
-                                <h3>It’s amazing</h3>
-                                <p>My book arrived for my niece today, kingdom of you, it’s amazing and I can’t wait to give it to her. Will be recommending this to everyone that will listen. Thanks so much</p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="separator"></span>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-3">
-                            <div class="lost-my-name__reviews__user">
-                                <div class="rating four">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                </div>
-                                <h4>Evelyn Walsh</h4>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-9">
-                            <div class="lost-my-name__reviews__comment">
-                                <h3>Wonderful concept</h3>
-                                <p>Her Majesty The Story Queen thoroughly approves this wonderful concept. High five guys!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="separator"></span>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-3">
-                            <div class="lost-my-name__reviews__user">
-                                <div class="rating five">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                </div>
-                                <h4>Cara Waterfall</h4>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-9">
-                            <div class="lost-my-name__reviews__comment">
-                                <h3>Center of their own adventures</h3>
-                                <p>My sons love being at the center of their own adventures in all the Wonderbly books! And this time, they were pretty excited that the things they love most (animals and pizza for Isaac, dinosaurs and ice cream for Samuel) were part of their kingdom!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="separator"></span>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-3">
-                            <div class="lost-my-name__reviews__user">
-                                <div class="rating five">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                </div>
-                                <h4>Patricia Dupin</h4>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-9">
-                            <div class="lost-my-name__reviews__comment">
-                                <h3>Beautifully illustrated</h3>
-                                <p>Just received "Kingdom of You" for my Grandson which I will be giving him as an Easter present. It is beautifully illustrated and I am sure that he will love it as he did "The Boy Who Lost His Name". My order was processed quickly and arrived soon after, it was all very efficient. Ordered 18th March and with me 22nd March. Lovely product and excellent customer service.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="separator"></span>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-3">
-                            <div class="lost-my-name__reviews__user">
-                                <div class="rating four">
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                    <span class="star"></span>
-                                </div>
-                                <h4>Amanda Kingsbury</h4>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-9">
-                            <div class="lost-my-name__reviews__comment">
-                                <h3>Truly awesome idea</h3>
-                                <p>My son loves his book!! This is a truly awesome idea</p>
-                            </div>
-                        </div>
-                    </div>
+
+                    <a href="#" class="lost-my-name__btn toggle active" href="#">
+                        <span class="close-state desktop">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                            <span>Close panel</span>
+                        </span>
+                        <span class="open-state desktop">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                            <span>Open panel</span>
+                        </span>
+
+                        <span class="close-state mobile">
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </span>
+                        <span class="open-state mobile">
+                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

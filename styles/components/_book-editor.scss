@@ -2,7 +2,6 @@ $pre: 'lost-my-name__book-editor';
 
 .#{$pre} {
     @include block-spacing($block-spacing, $block-spacing-tablet);
-    padding-bottom: 0;
     padding-top: 50px;
     position: relative;
 
@@ -12,65 +11,165 @@ $pre: 'lost-my-name__book-editor';
         }
     }
 
-    .#{$pre}__options {
-        @extend %vertical-centered;
-        right: -10px;
-        .#{$pre}__tabbed {
+    .continue-wrapper {
+        padding: 15px;
+        background-color: $color-white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        .continue {
+            width: 100%;
+            .fa {
+                margin-left: 10px;
+            }
+        }
+    }
+    .toggle {
+        background-color: $color-white;
+        position: absolute;
+        top: 148px;
+        left: -40px;
+        width: 40px;
+        height: 40px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: -2px 1px 2px $color-dark-brown;
+        padding: 5px 10px;
 
-            .wish {
-                cursor: pointer;
-                border-radius: 50%;
-                padding: 5px;
+        @include respond-to-min($tabletSize) {
+            width: 100px;
+            height: auto;
+            left: -100px;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        @include respond-to-max($tabletSize) {
+            .mobile {
                 display: block;
-                background-color: $color-white;
-                width: 35px;
-                height: 35px;
-                text-align: center;
-                @extend %shadow-box;
-                margin: 15px 8px;
-                @include prefix((transition: all 0.35s ease-in-out), webkit moz ms o);
+            }
 
-                @include respond-to-max($tabletSize) {
-                    padding: 9px;
-                    display: inline-block;
-                    margin-top: 0;
-                    margin-bottom: 0;
+            .desktop {
+                display: none;
+            }
+        }
+
+        &:hover {
+            @include set-opacity(1);
+            background-color: $color-light-red;
+            
+            span {
+                color: $color-white;
+            }
+        }
+
+        span {
+            color: $color-gray;
+            line-height: 1;
+            font-size: 30px;
+            text-align: left;
+            
+            span {
+                display: block;
+                font-size: 12px;
+            }
+
+            &.close-state {
+                display: none;
+            }
+
+            @include respond-to-min($tabletSize) {
+                text-align: center;
+
+                .fa {
+                    font-size: 50px;
+                }
+                span {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &.active {
+            .open-state {
+                display: none;
+            }
+
+            .close-state.desktop {
+                display: block;
+            }
+
+            .close-state.mobile {
+                display: none;
+            }
+    
+            @include respond-to-max($tabletSize) { 
+                .close-state.desktop {
+                    display: none;
+                }
+    
+                .close-state.mobile {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    .#{$pre}-wrapper {
+        position: fixed;
+        top: 0;
+        right: -272px;
+        background: $color-white;
+        width: 270px;
+        @extend %shadow-box;
+        height: 100vh;
+        z-index: 100;
+        @include prefix((transition: all 0.3s ease-in-out), webkit moz ms o);
+        
+
+        &.active {
+            right: 0;
+        }
+    }
+
+    .#{$pre}__options {
+        
+        .#{$pre}__tabbed {
+            clear: both;
+            font-size: 0;
+            .wish {
+                display: inline-block;
+                width: 50px;
+                text-align: center;
+                padding: 10px 0;
+                cursor: pointer;
+
+                &:last-child {
+                    border: none;
                 }
 
                 .fa {
-                    font-size: 14px;
+                    font-size: 16px;
+                }
+
+                span {
+                    font-size: 12px;
+                    display: none;
+                    margin-left: 5px;
                 }
 
                 &.active {
                     background-color: $color-lighter-red;
                     color: $color-white;
-                }
+                    box-shadow: 4px 4px 0px $color-darker-brown;
+                    width: 170px;
 
-                @include respond-to-max($tabletSize) {
-                    &.first-wish {
-                        margin-left: 0;
+                    span {
+                        display: inline-block;
                     }
-                }
-            }
-
-            .continue {
-                @extend .wish;
-                width: 50px;
-                height: 50px;
-                padding: 14px;
-                margin: 15px 0;
-                background-color: $color-light-green;
-                color: $color-white;
-                margin-top: 40px;
-
-                @include respond-to-max($tabletSize) {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    margin-left: 30px;
-                }
-                
-                .fa {
-                    font-size: 20px;
                 }
             }
         }
@@ -87,33 +186,39 @@ $pre: 'lost-my-name__book-editor';
     }
 
     .#{$pre}__suboptions {
+        height: calc(100vh - 100px);
+        overflow: hidden;
+        overflow-y: visible;
+
         .wish-option {
             padding: 15px;
             background-color: $color-brown;
-            @extend %vertical-centered;
             right: 50px;
-            width: 300px;
+            width: 100%;
             height: auto;
             background-color: $color-white;
             z-index: 10;
             border-radius: 10px;
-            @extend %shadow-box;
             display: none;
+            margin-top: 5px;
+            border-top: 1px dashed $color-darker-brown;
 
             &#first-wish {
                 display: block;
             }
+            
+            .gender-box {
+                .dropdown-menu {
+                    &.boy {
+                        left: 0;
+                        right: auto;
+                    }
 
-            &#second-wish {
-                margin-top: 38px;
-            }
-
-            @include respond-to-max($tabletSize) {
-                @include prefix((transform: translate(-50%, 0)), webkit moz ms o);
-                left: 50%;
-                top: calc(100% + 70px);
-                right: auto;
-                bottom: auto;
+                    &.girl {
+                        left: auto;
+                        right: 0;
+                    }
+                }
             }
     
             h4 {
@@ -179,36 +284,47 @@ $pre: 'lost-my-name__book-editor';
                 }
             }
 
+            &#second-wish {
+                padding: 0;
+            }
+
             .tabs {
                 position: relative;
 
                 .tabs-wrapper {
-                    @extend %horizontal-centered;
-                    top: -57px;
                     width: 100%;
                     text-align: center;
-                    z-index: 10;
-
-                    @include respond-to-max($tabletSize) {
-                        top: -52px;
-                    }
+                    font-size: 0;
 
                     .wish {
                         display: inline-block;
                         padding: 10px;
-                        background-color: $color-white;
-                        border-top-left-radius: 5px;
-                        border-top-right-radius: 5px;
-                        width: 50px;
+                        width: 13%;
                         cursor: pointer;
-                        
-                        @include respond-to-max($tabletSize) {
-                            box-shadow: 0 -3px 2px $color-lighter-gray;
+
+                        &:last-child {
+                            border-right: 0;
+                        }
+
+                        .fa {
+                            font-size: 14px;
+                        }
+
+                        span {
+                            font-size: 12px;
+                            margin-left: 5px;
+                            display: none;
                         }
 
                         &.active {
                             background-color: $color-lighter-red;
                             color: $color-white;
+                            box-shadow: 4px 4px 0px $color-darker-brown;
+                            width: 48%;
+
+                            span {
+                                display: inline-block;
+                            }
                         }
                     }
                 }
@@ -216,6 +332,9 @@ $pre: 'lost-my-name__book-editor';
 
             .character-tab {
                 display: none;
+                padding: 15px;
+                margin-top: 5px;
+                border-top: 1px dashed $color-darker-brown;
 
                 &.active {
                     display: block;

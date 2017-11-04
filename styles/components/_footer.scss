@@ -12,9 +12,10 @@ $pre: 'lost-my-name__footer';
         .#{$pre}__nav {    
             .#{$pre}__logo {
                 display: inline-block;
-    
-                span {
-                    margin-left: 3px;
+
+                img {
+                    height: 40px;
+                    vertical-align: middle;
                 }
 
                 @include respond-to-max($tabletSize) {
