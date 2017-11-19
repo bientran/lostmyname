@@ -387,7 +387,7 @@ table {
   src: local("Playfair Display Black"), local("PlayfairDisplay-Black"), url(https://fonts.gstatic.com/s/playfairdisplay/v11/UC3ZEjagJi85gF9qFaBgIMGhQI7v0ryGuSQ4oDzNyds.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
-body, .lost-my-name__quote-text, .lost-my-name__information .lost-my-name__information-content p, .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li a, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box input[type="text"], .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper p, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form input, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form textarea {
+body, .lost-my-name__quote-text, .lost-my-name__information .lost-my-name__information-content p, .lost-my-name__header .lost-my-name__header__navigation .lost-my-name__header__right-nav .lost-my-name__header__right-nav-wrapper .lost-my-name__header__nav li a, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box input[type="text"], .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box select, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box textarea, .lost-my-name__photo-gallery .lost-my-name__photo-gallery__photos .lost-my-name__photo-gallery__photos-item .quote .quote-wrapper p, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form input, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form textarea, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form select {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: 300; }
 
@@ -532,10 +532,17 @@ a {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  bottom: 15px;
+  left: 15px;
   border-radius: 50%;
   padding: 5px;
-  border: 3px solid #2ED3E9; }
+  border: 3px solid #2ED3E9;
+  text-align: center;
+  z-index: 101;
+  background-color: #fff; }
+  .lost-my-name__icon .fa {
+    color: #000;
+    font-size: 19px;
+    line-height: 23px; }
   .lost-my-name__icon:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=8)";
     -ms-filter: opacity(8);
@@ -544,13 +551,12 @@ a {
     -khtml-opacity: 0.8;
     opacity: 0.8; }
   .lost-my-name__icon.icon-support {
-    left: 15px;
-    background: #fff url(/images/support.jpg) no-repeat center center;
-    background-size: cover; }
+    bottom: 15px; }
   .lost-my-name__icon.icon-create-book {
-    right: 15px;
-    background: #fff url(/images/add-book.png) no-repeat center center;
-    background-size: cover; }
+    bottom: 62px; }
+  @media only screen and (max-width: 479px) {
+    .lost-my-name__icon {
+      display: none; } }
 
 .rating .star:before {
   font-family: FontAwesome;
@@ -649,6 +655,72 @@ a {
 @media only screen and (min-width: 1200px) {
   .mfp-wrap .mfp-img {
     max-width: 1200px !important; } }
+
+input, select, textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  input:focus, select:focus, textarea:focus {
+    border-color: #17adc1 !important; }
+
+.bb-custom-wrapper {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center; }
+
+.bb-custom-wrapper .bb-bookblock {
+  box-shadow: 0 12px 20px -10px rgba(81, 64, 49, 0.6); }
+
+.bb-custom-wrapper h3 {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 0.4em 0 1em; }
+
+.bb-custom-wrapper nav {
+  width: 100%;
+  height: 30px;
+  margin: 1em auto 0;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+  margin: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -ms-filter: opacity(0);
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0; }
+
+.bb-custom-wrapper nav a {
+  display: inline-block;
+  width: 50%;
+  height: 555px;
+  text-align: center;
+  border-radius: 2px;
+  background: transparent;
+  color: transparent;
+  margin: 0 -5px;
+  font-size: 0; }
+
+.bb-custom-wrapper nav a .fa {
+  line-height: 30px; }
+
+.bb-custom-wrapper nav a:hover {
+  opacity: 0.6; }
+
+#bb-nav-first, #bb-nav-last {
+  display: none; }
+
+/* No JS */
+.no-js .bb-custom-wrapper {
+  height: auto; }
+
+.no-js .bb-custom-content {
+  height: 470px; }
 
 .lost-my-name__information {
   padding: 10px;
@@ -832,7 +904,7 @@ a {
     padding: 25px;
     border-radius: 5px;
     text-align: center; }
-    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box input[type="text"] {
+    .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box input[type="text"], .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box select, .lost-my-name__book-customizer .lost-my-name__book-customizer__search-box textarea {
       padding: 10px;
       display: block;
       width: 100%;
@@ -907,13 +979,16 @@ a {
     border-top: 5px solid #2ED3E9;
     width: 240px;
     text-align: center;
-    left: 15px; }
+    left: 0; }
     .gender-box .dropdown-menu.girl {
       left: auto;
-      right: 15px; }
+      right: 0; }
     @media only screen and (max-width: 639px) {
       .gender-box .dropdown-menu {
-        max-width: 100%; } }
+        max-width: 100%;
+        left: 15px; }
+        .gender-box .dropdown-menu.girl {
+          right: 15px; } }
     .gender-box .dropdown-menu li {
       display: inline-block;
       border: 2px dashed #eeebdc;
@@ -1169,12 +1244,10 @@ a {
   .lost-my-name__book-editor .continue-wrapper {
     padding: 15px;
     background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%; }
+    display: block;
+    text-align: center; }
     .lost-my-name__book-editor .continue-wrapper .continue {
-      width: 100%; }
+      min-width: 220px; }
       .lost-my-name__book-editor .continue-wrapper .continue .fa {
         margin-left: 10px; }
   .lost-my-name__book-editor .toggle {
@@ -1238,12 +1311,15 @@ a {
         display: none; }
       .lost-my-name__book-editor .toggle.active .close-state.mobile {
         display: block; } }
+    @media only screen and (max-width: 479px) {
+      .lost-my-name__book-editor .toggle {
+        display: none; } }
   .lost-my-name__book-editor .lost-my-name__book-editor-wrapper {
     position: fixed;
     top: 0;
-    right: -272px;
+    right: -422px;
     background: #fff;
-    width: 270px;
+    width: 420px;
     height: 100vh;
     z-index: 100;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1251,32 +1327,72 @@ a {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+    @media only screen and (max-width: 479px) {
+      .lost-my-name__book-editor .lost-my-name__book-editor-wrapper {
+        width: 100%;
+        position: initial;
+        top: auto;
+        right: auto;
+        box-shadow: none;
+        height: auto;
+        overflow: initial; } }
     .lost-my-name__book-editor .lost-my-name__book-editor-wrapper.active {
       right: 0; }
   .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed {
     clear: both;
-    font-size: 0; }
+    font-size: 0;
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: visible; }
+    @media only screen and (max-width: 479px) {
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed {
+        max-height: initial;
+        overflow: initial; } }
     .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish {
-      display: inline-block;
-      width: 50px;
-      text-align: center;
-      padding: 10px 0;
+      display: block;
       cursor: pointer; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish:last-child {
-        border: none; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .fa {
-        font-size: 16px; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish span {
-        font-size: 12px;
-        display: none;
-        margin-left: 5px; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish.active {
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab {
+        padding: 10px 10px 10px 20px;
+        box-shadow: 4px 4px 0px #eeebdc;
+        border: 1px solid #eeebdc;
+        margin: 5px;
+        -webkit-transition: all 0.15s ease-in-out;
+        -moz-transition: all 0.15s ease-in-out;
+        -ms-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out; }
+        @media only screen and (max-width: 639px) {
+          .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab {
+            margin: 5px 0; } }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab:hover {
+          background-color: #eeebdc;
+          box-shadow: 4px 4px 0px #e0ddcb; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab .fa {
+          font-size: 26px;
+          display: inline-block;
+          line-height: 40px;
+          vertical-align: bottom;
+          margin-right: 15px;
+          min-width: 25px;
+          text-align: center; }
+          @media only screen and (max-width: 639px) {
+            .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab .fa {
+              display: block; } }
+        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab div.subtext {
+          display: inline-block; }
+          @media only screen and (max-width: 639px) {
+            .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab div.subtext {
+              display: block; } }
+          .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab div.subtext h2 {
+            font-size: 25px;
+            font-weight: bold; }
+          .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish .tab div.subtext span {
+            font-size: 12px;
+            margin-left: 5px; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish.active .tab {
         background-color: #2ED3E9;
         color: #fff;
-        box-shadow: 4px 4px 0px #eeebdc;
-        width: 170px; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__options .lost-my-name__book-editor__tabbed .wish.active span {
-          display: inline-block; }
+        box-shadow: 4px 4px 0px #eeebdc; }
   @media only screen and (max-width: 767px) {
     .lost-my-name__book-editor .lost-my-name__book-editor__options {
       left: 0;
@@ -1290,99 +1406,117 @@ a {
       transform: none;
       width: 100%;
       text-align: center; } }
-  .lost-my-name__book-editor .lost-my-name__book-editor__suboptions {
-    height: calc(100vh - 100px);
-    overflow: hidden;
-    overflow-y: visible; }
-    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option {
-      padding: 15px;
-      background-color: #fff;
-      right: 50px;
-      width: 100%;
-      height: auto;
-      background-color: #fff;
-      z-index: 10;
-      border-radius: 10px;
-      display: none;
-      margin-top: 5px;
-      border-top: 1px dashed #eeebdc; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option#first-wish {
-        display: block; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .gender-box .dropdown-menu.boy {
-        left: 0;
-        right: auto; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .gender-box .dropdown-menu.girl {
-        left: auto;
-        right: 0; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option h4 {
-        margin-bottom: 10px;
+  .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option {
+    padding: 15px;
+    background-color: #fff;
+    right: 50px;
+    height: auto;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+    margin: 5px;
+    border: 1px dashed #eeebdc; }
+    @media only screen and (max-width: 639px) {
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option {
+        margin: 5px 0; } }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option#first-wish {
+      display: block; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .gender-box .dropdown-menu.boy {
+      left: 0;
+      right: auto; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .gender-box .dropdown-menu.girl {
+      left: auto;
+      right: 0; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option h4 {
+      margin-bottom: 10px;
+      display: block;
+      width: 100%; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option p {
+      margin-bottom: 15px;
+      font-size: 14px; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form {
+      font-size: 14px; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form input, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form textarea, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form select {
+        padding: 10px;
         display: block;
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #eeebdc;
+        outline: none; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .dedication-form img {
+      width: 100%; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .dedication-form form {
+      text-align: right;
+      margin: 0; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .dedication-form form textarea {
+        height: 100px;
+        resize: none; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item {
+      background-color: #fff;
+      border-radius: 5px;
+      cursor: pointer; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item img {
         width: 100%; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option p {
-        margin-bottom: 15px;
-        font-size: 14px; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form {
-        font-size: 14px; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form input, .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option form textarea {
-          padding: 10px;
-          display: block;
-          width: 100%;
-          border-radius: 3px;
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item p {
+        padding: 5px;
+        text-align: center;
+        margin-top: -6px; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option#second-wish {
+      padding: 0; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs {
+      position: relative; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper {
+        width: 100%;
+        font-size: 0; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext {
+          cursor: pointer;
+          margin: 5px 5px 10px 5px;
+          padding: 10px 10px 10px 20px;
+          box-shadow: 4px 4px 0px #eeebdc;
           border: 1px solid #eeebdc;
-          outline: none; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .dedication-form img {
-        width: 100%; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .dedication-form form {
-        text-align: right;
-        margin: 0; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .dedication-form form textarea {
-          height: 100px;
-          resize: none; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item {
-        background-color: #fff;
-        border-radius: 5px;
-        cursor: pointer; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item img {
-          width: 100%; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .wish-items .wish-item p {
-          padding: 5px;
-          text-align: center;
-          margin-top: -6px; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option#second-wish {
-        padding: 0; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs {
-        position: relative; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper {
-          width: 100%;
-          text-align: center;
-          font-size: 0; }
-          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish {
+          margin: 5px;
+          -webkit-transition: all 0.15s ease-in-out;
+          -moz-transition: all 0.15s ease-in-out;
+          -ms-transition: all 0.15s ease-in-out;
+          -o-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out; }
+          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext .fa {
+            font-size: 20px;
             display: inline-block;
-            padding: 10px;
-            width: 13%;
-            cursor: pointer; }
-            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish:last-child {
-              border-right: 0; }
-            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .fa {
-              font-size: 14px; }
-            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish span {
-              font-size: 12px;
-              margin-left: 5px;
-              display: none; }
-            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish.active {
-              background-color: #2ED3E9;
-              color: #fff;
-              box-shadow: 4px 4px 0px #eeebdc;
-              width: 48%; }
-              .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish.active span {
-                display: inline-block; }
-      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .character-tab {
-        display: none;
-        padding: 15px;
-        margin-top: 5px;
-        border-top: 1px dashed #eeebdc; }
-        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .character-tab.active {
-          display: block; }
+            margin-right: 10px;
+            vertical-align: bottom;
+            line-height: 35px;
+            min-width: 20px;
+            text-align: center; }
+            @media only screen and (max-width: 639px) {
+              .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext .fa {
+                display: block; } }
+          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext:hover {
+            background-color: #eeebdc;
+            box-shadow: 4px 4px 0px #e0ddcb; }
+          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext > div {
+            display: inline-block; }
+            @media only screen and (max-width: 639px) {
+              .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext > div {
+                display: block; } }
+            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext > div h4 {
+              font-size: 16px;
+              margin: 0; }
+            .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish .tabstext > div span {
+              font-size: 12px; }
+        .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish.active .tabstext {
+          background-color: #2ED3E9;
+          color: #fff;
+          box-shadow: 4px 4px 0px #eeebdc; }
+          .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .tabs .tabs-wrapper .wish.active .tabstext span {
+            display: inline-block; }
+    .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .character-tab {
+      display: none;
+      padding: 15px;
+      margin: 5px;
+      border: 1px dashed #eeebdc; }
+      .lost-my-name__book-editor .lost-my-name__book-editor__suboptions .wish-option .character-tab.active {
+        display: block; }
 
 .has-space {
   margin-bottom: 15px; }
@@ -1395,8 +1529,7 @@ a {
   background-color: #fff; }
   .lost-my-name__footer .lost-my-name__footer__top {
     border-top: 2px dashed #eeebdc;
-    border-bottom: 2px dashed #eeebdc;
-    padding: 20px 0; }
+    border-bottom: 2px dashed #eeebdc; }
     .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__logo {
       display: inline-block; }
       .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__logo img {
@@ -1408,8 +1541,9 @@ a {
           text-align: center;
           margin-bottom: 7px;
           border-bottom: 1px dashed #676764;
-          padding-bottom: 15px;
-          font-size: 30px; } }
+          font-size: 30px; }
+          .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__logo img {
+            height: 70px; } }
     .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__main-nav {
       display: inline-block;
       margin-left: 15px; }
@@ -1426,6 +1560,7 @@ a {
             .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__main-nav li a {
               display: block;
               text-align: center;
+              padding: 5px 15px;
               width: 100%; } }
         @media only screen and (max-width: 767px) {
           .lost-my-name__footer .lost-my-name__footer__top .lost-my-name__footer__nav .lost-my-name__footer__main-nav li {

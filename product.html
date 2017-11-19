@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="lib/bootstrap.min.css">
         <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="lib/ubislider.min.css">
+        <link rel="stylesheet" href="lib/bookblock.css">
         <link href="dist/css/styles.min.css" rel="stylesheet">
     </head>
     <body>
@@ -123,10 +124,16 @@
                 <form action="#" method="post">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
                                 <input type="text" name="fullname" placeholder="Enter child's name" />
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <select name="language" placeholder="Enter child's name">
+                                    <option value="VN">Vietnamese</option>
+                                    <option value="EN">English</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3">
                                 <input type="hidden" id="gender" name="gender" value="genderAfterSelected" />
                                 <div class="gender-box have-margin" class="dropup">
                                     <label for="male" data-toggle="dropdown">Boy</label>
@@ -165,7 +172,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
                                 <input type="submit" value="Create Book" name="submit" class="lost-my-name__btn" />
                             </div>
                         </div>
@@ -359,7 +366,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="lost-my-name__footer__nav">
                                 <a href="#" class="lost-my-name__footer__logo">
-                                    <span>lostmy.name</span>
+                                    <img src="dist/images/logo.png" alt="Logo">
                                 </a>
                                 <ul class="lost-my-name__footer__main-nav">
                                     <li><a href="#">Create</a></li>
@@ -381,7 +388,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6">
-                            <p class="lost-my-name__footer__copyright">&copy;Copyright lostmy.name 2012. All rights reserved</p>
+                            <p class="lost-my-name__footer__copyright">&copy;Copyright Upibo 2012. All rights reserved</p>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <ul class="lost-my-name__footer__second-nav">
@@ -395,8 +402,8 @@
             </div>
         </div>
 
-        <a href="#" class="lost-my-name__icon icon-support"></a>
-        <a href="#" class="lost-my-name__icon icon-create-book"></a>
+        <a href="#" class="lost-my-name__icon icon-support"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <a href="#" class="lost-my-name__icon icon-create-book"><i class="fa fa-address-book" aria-hidden="true"></i></a>
 
         <script src="lib/jquery.min.js"></script>
         <script src="lib/tether.min.js"></script>
@@ -405,6 +412,8 @@
         <script src="lib/slick.min.js"></script>
         <script src="lib/masonry.pkgd.min.js"></script>
         <script src="lib/ubislider.min.js"></script>
+        <script src="lib/jquerypp.custom.js"></script>
+		<script src="lib/jquery.bookblock.min.js"></script>
         <script src="dist/js/scripts.min.js"></script>
     </body>
 </html>

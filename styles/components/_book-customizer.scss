@@ -33,7 +33,7 @@ $pre: 'lost-my-name__book-customizer';
         border-radius: 5px;
         text-align: center;
 
-        input[type="text"] {
+        input[type="text"], select, textarea {
             padding: 10px;
             display: block;
             width: 100%;
@@ -142,15 +142,20 @@ $pre: 'lost-my-name__book-customizer';
         border-top: 5px solid $color-light-green;
         width: 240px;
         text-align: center;
-        left: 15px;
+        left: 0;
 
         &.girl {
             left: auto;
-            right: 15px;
+            right: 0;
         }
         
 		@include respond-to-max($phoneLandscape) {
-			max-width: 100%;
+            max-width: 100%;
+            left: 15px;
+
+            &.girl {
+                right: 15px;
+            }
 		}
 
         li {

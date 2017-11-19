@@ -14,12 +14,10 @@ $pre: 'lost-my-name__book-editor';
     .continue-wrapper {
         padding: 15px;
         background-color: $color-white;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
+        display: block;
+        text-align: center;
         .continue {
-            width: 100%;
+            min-width: 220px;
             .fa {
                 margin-left: 10px;
             }
@@ -116,19 +114,32 @@ $pre: 'lost-my-name__book-editor';
                 }
             }
         }
+
+        @include respond-to-max($phonePortrait) {
+            display: none;
+        }
     }
     
     .#{$pre}-wrapper {
         position: fixed;
         top: 0;
-        right: -272px;
+        right: -422px;
         background: $color-white;
-        width: 270px;
+        width: 420px;
         @extend %shadow-box;
         height: 100vh;
         z-index: 100;
         @include prefix((transition: all 0.3s ease-in-out), webkit moz ms o);
         
+        @include respond-to-max($phonePortrait) {
+            width: 100%;
+            position: initial;
+            top: auto;
+            right: auto;
+            box-shadow: none;
+            height: auto;
+            overflow: initial;
+        }
 
         &.active {
             right: 0;
@@ -140,35 +151,73 @@ $pre: 'lost-my-name__book-editor';
         .#{$pre}__tabbed {
             clear: both;
             font-size: 0;
+            max-height: 100vh;
+            overflow: hidden;
+            overflow-y: visible;
+
+            @include respond-to-max($phonePortrait) {
+                max-height: initial;
+                overflow: initial;
+            }
+
             .wish {
-                display: inline-block;
-                width: 50px;
-                text-align: center;
-                padding: 10px 0;
+                display: block;
                 cursor: pointer;
 
-                &:last-child {
-                    border: none;
-                }
+                .tab {
+                    padding: 10px 10px 10px 20px;
+                    box-shadow: 4px 4px 0px $color-darker-brown;
+                    border: 1px solid $color-darker-brown;
+                    margin: 5px;
+                    @include prefix((transition: all 0.15s ease-in-out), webkit moz ms o);
 
-                .fa {
-                    font-size: 16px;
-                }
+                    @include respond-to-max($phoneLandscape) {
+                        margin: 5px 0;
+                    }
 
-                span {
-                    font-size: 12px;
-                    display: none;
-                    margin-left: 5px;
+                    &:hover {
+                        background-color: $color-darker-brown;
+                        box-shadow: 4px 4px 0px $color-darkest-brown;
+                    }
+
+                    .fa {
+                        font-size: 26px;
+                        display: inline-block;
+                        line-height: 40px;
+                        vertical-align: bottom;
+                        margin-right: 15px;
+                        min-width: 25px;
+                        text-align: center;
+
+                        @include respond-to-max($phoneLandscape) {
+                            display: block;
+                        }
+                    }
+    
+                    div.subtext {
+                        display: inline-block;
+
+                        @include respond-to-max($phoneLandscape) {
+                            display: block;
+                        }
+
+                        h2 {
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+        
+                        span {
+                            font-size: 12px;
+                            margin-left: 5px;
+                        }
+                    }
                 }
 
                 &.active {
-                    background-color: $color-lighter-red;
-                    color: $color-white;
-                    box-shadow: 4px 4px 0px $color-darker-brown;
-                    width: 170px;
-
-                    span {
-                        display: inline-block;
+                    .tab {
+                        background-color: $color-lighter-red;
+                        color: $color-white;
+                        box-shadow: 4px 4px 0px $color-darker-brown;
                     }
                 }
             }
@@ -186,22 +235,21 @@ $pre: 'lost-my-name__book-editor';
     }
 
     .#{$pre}__suboptions {
-        height: calc(100vh - 100px);
-        overflow: hidden;
-        overflow-y: visible;
 
         .wish-option {
             padding: 15px;
             background-color: $color-brown;
             right: 50px;
-            width: 100%;
             height: auto;
             background-color: $color-white;
             z-index: 10;
-            border-radius: 10px;
             display: none;
-            margin-top: 5px;
-            border-top: 1px dashed $color-darker-brown;
+            margin: 5px;
+            border: 1px dashed $color-darker-brown;
+
+            @include respond-to-max($phoneLandscape) {
+                margin: 5px 0;
+            }
 
             &#first-wish {
                 display: block;
@@ -235,7 +283,7 @@ $pre: 'lost-my-name__book-editor';
     
             form {
                 font-size: 14px;
-                input, textarea {
+                input, textarea, select {
                     padding: 10px;
                     display: block;
                     width: 100%;
@@ -293,37 +341,63 @@ $pre: 'lost-my-name__book-editor';
 
                 .tabs-wrapper {
                     width: 100%;
-                    text-align: center;
                     font-size: 0;
 
                     .wish {
-                        display: inline-block;
-                        padding: 10px;
-                        width: 13%;
-                        cursor: pointer;
+                        .tabstext {
+                            cursor: pointer;
+                            margin: 5px 5px 10px 5px;
+                            padding: 10px 10px 10px 20px;
+                            box-shadow: 4px 4px 0px $color-darker-brown;
+                            border: 1px solid $color-darker-brown;
+                            margin: 5px;
+                            @include prefix((transition: all 0.15s ease-in-out), webkit moz ms o);
 
-                        &:last-child {
-                            border-right: 0;
-                        }
+                            .fa {
+                                font-size: 20px;
+                                display: inline-block;
+                                margin-right: 10px;
+                                vertical-align: bottom;
+                                line-height: 35px;
+                                min-width: 20px;
+                                text-align: center;
 
-                        .fa {
-                            font-size: 14px;
-                        }
+                                @include respond-to-max($phoneLandscape) {
+                                    display: block;
+                                }
+                            }
 
-                        span {
-                            font-size: 12px;
-                            margin-left: 5px;
-                            display: none;
+                            &:hover {
+                                background-color: $color-darker-brown;
+                                box-shadow: 4px 4px 0px $color-darkest-brown;
+                            }
+    
+                            > div {
+                                display: inline-block;
+
+                                @include respond-to-max($phoneLandscape) {
+                                    display: block;
+                                }
+
+                                h4 {
+                                    font-size: 16px;
+                                    margin: 0;
+                                }
+                                span {
+                                    font-size: 12px;
+                                }
+                            }
                         }
 
                         &.active {
-                            background-color: $color-lighter-red;
-                            color: $color-white;
-                            box-shadow: 4px 4px 0px $color-darker-brown;
-                            width: 48%;
-
-                            span {
-                                display: inline-block;
+                            .tabstext {
+                                background-color: $color-lighter-red;
+                                color: $color-white;
+                                box-shadow: 4px 4px 0px $color-darker-brown;
+    
+                                span {
+                                    display: inline-block;
+                                }
                             }
                         }
                     }
@@ -333,8 +407,9 @@ $pre: 'lost-my-name__book-editor';
             .character-tab {
                 display: none;
                 padding: 15px;
-                margin-top: 5px;
-                border-top: 1px dashed $color-darker-brown;
+                margin: 5px;
+                
+                border: 1px dashed $color-darker-brown;
 
                 &.active {
                     display: block;

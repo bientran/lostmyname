@@ -7,7 +7,6 @@ $pre: 'lost-my-name__footer';
         @extend %roboto-bold;
         border-top: 2px dashed $color-darker-brown;
         border-bottom: 2px dashed $color-darker-brown;
-        padding: 20px 0;
 
         .#{$pre}__nav {    
             .#{$pre}__logo {
@@ -23,8 +22,11 @@ $pre: 'lost-my-name__footer';
                     text-align: center;
                     margin-bottom: 7px;
                     border-bottom: 1px dashed $color-dark-brown;
-                    padding-bottom: 15px;
                     font-size: 30px;
+
+                    img {
+                        height: 70px;
+                    }
                 }
             }
             .#{$pre}__main-nav {
@@ -46,6 +48,7 @@ $pre: 'lost-my-name__footer';
                         @include respond-to-max($tabletSize) {
                             display: block;
                             text-align: center;
+                            padding: 5px 15px;
                             width: 100%;
                         }
                     }
